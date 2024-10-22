@@ -14,15 +14,15 @@ int     ft_isdigit(char *str)
                 }
                 else
                 {
-                        printf("not digit\n");
+ //                       printf("not digit\n");
                         return (1);
                 }
         }
-                        printf("is digit\n");
+//                        printf("is digit\n");
                         return (0);
 }
 
-int     main(void)
+/* int     main(void)
 {
         char    *string = "123";
         char    *string2 = "abc";
@@ -32,4 +32,4 @@ int     main(void)
         ft_isdigit(string2);
         ft_isdigit(string3);
         return (0);
-}
+} */

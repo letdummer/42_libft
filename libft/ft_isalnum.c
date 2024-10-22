@@ -2,30 +2,25 @@
 
 int     ft_isalnum(int c)
 {
-                if ((c >= 'a' && c <= 'z')
-                        || (c >= 'A' && c <= 'Z')
-                        || (c >= '0' && c <= '9'))
-                {
-                        printf("alfanum\n");
-                        return (1);
-                }
-                else
-                {
-                        printf("nao alfanum\n");
-                        return (0);
-                }
-
-
+        return ((c >= 'a' && c <= 'z')
+                || (c >= 'A' && c <= 'Z')
+                || (c >= '0' && c <= '9'));
 }
 
-int     main(void)
+/* int     main(void)
 {
-        char    ch1 = 'a';
-        char    ch2 = '3';
-        char    ch3 = '$';
+    char    chars[] = {'a', '3', '$'};
+    int     result;
+    int     i = 0;
 
-        ft_isalnum(ch1);
-        ft_isalnum(ch2);
-        ft_isalnum(ch3);
+    while (i < 3)
+    {
+        result = ft_isalnum(chars[i]);
+        if (result)
+            printf("%c is alphanum\n", chars[i]);
+        else
+            printf("%c is not alphanum\n", chars[i]);
+        i++;  
+        }
         return (0);
-}
+} */
