@@ -4,12 +4,10 @@ int     ft_isprint(int c)
 {
         if (c >= 32 && c <= 126)
         {
-                printf("is printable\n");
                 return (1);
         }
         else
         {
-                printf("not printable\n");
                 return (0);
         }
 }

@@ -11,8 +11,8 @@ size_t ft_strlen(const char *str);
 
 int     main(void)
 {
-        char    *src = "this is a string!";
-        char    dest[100] = "";
+        char    *src = "this is ";
+        char    dest[100] = "a string!";
 
         ft_strlcat(dest, src);
         ft_putstr_fd(dest, 1);

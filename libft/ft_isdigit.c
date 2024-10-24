@@ -1,35 +1,25 @@
 #include "libft.h"
 
-int     ft_isdigit(char *str)
+#include <stdio.h>
+
+int     ft_isdigit(int c)
 {
-        int     i;
-
-        i = 0;
-
-        while(str[i] != '\0')
-        {
-                if(str[i] >= '0' && str[i] <= '9')
-                {
-                        i++;
-                }
-                else
-                {
- //                       printf("not digit\n");
-                        return (1);
-                }
-        }
-//                        printf("is digit\n");
-                        return (0);
+        if(c >= '0' && c <= '9')
+                return (0);
+        else
+                return (1);
 }
 
-/* int     main(void)
+int     main(void)
 {
-        char    *string = "123";
-        char    *string2 = "abc";
-        char    *string3 = "12a3";
+        int     c;
+        int     result;
 
-        ft_isdigit(string);
-        ft_isdigit(string2);
-        ft_isdigit(string3);
+        c = '9';
+        result = ft_isdigit(c);
+        if (result == 0)
+                printf("%c is digit\n", c);
+        else
+                printf("%c is not digit\n", c);
         return (0);
-} */
+}

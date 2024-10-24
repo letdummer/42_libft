@@ -1,11 +1,12 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
+
+#include <stdlib.h> //COMENTAR OU RETIRAR FUNCAO ORIGINAL
 
 int ft_atoi(const char *str);
 
 int main(void)
 {
-    char    *string = "   --+-12345a678";
+    char    *string = "";
     int     result;
     int     result2;
 
@@ -26,7 +27,9 @@ int ft_atoi(const char *str)
     i = 0;
     result = 0;
     signal = 1;
-
+    if (str == NULL)
+        return (2);
+    
     while (str[i] == ' ')
     {
         i++;
