@@ -2,3 +2,7 @@
 *.a
 
 some_comments.md
+
+*.exe
+
+.pdf

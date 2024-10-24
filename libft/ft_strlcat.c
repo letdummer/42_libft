@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char    *ft_strcat(char *dest, const char *src);
+char    *ft_strlcat(char *dest, const char *src, size_t size);
 
 void    ft_putchar_fd(char c, int fd);
 
@@ -14,12 +14,12 @@ int     main(void)
         char    *src = "this is a string!";
         char    dest[100] = "";
 
-        ft_strcat(dest, src);
+        ft_strlcat(dest, src);
         ft_putstr_fd(dest, 1);
         return (0);
 }
 
-char    *ft_strcat(char *dest, const char *src)
+char    *ft_strlcat(char *dest, const char *src, size_t)
 {
         int     dest_len = ft_strlen(dest);
         int     i;
