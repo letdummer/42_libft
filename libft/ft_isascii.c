@@ -14,26 +14,25 @@
 
 int     ft_isascii(int c)
 {
-        if (c >= 0 && c <= 127)
-        {
-                return (1);
-        }
-        else
-        {
-                return(0);
+    if (c >= 0 && c <= 127)
+    {
+        return (1);
+    }
+    else
+    {
+        return(0);
 
-        }
-
+    }
 }
 
 int     main(void)
 {
-        char    ch1 = 'a';
-        char    ch2 = 'é';
-        char    ch3 = 'ñ';
+    char    ch1 = 'a';
+    char    ch2 = 'é';
+    char    ch3 = 'ñ';
 
-        ft_isascii(ch1);
-        ft_isascii(ch2);
-        ft_isascii(ch3);
-        return (0);
+    ft_isascii(ch1);
+    ft_isascii(ch2);
+    ft_isascii(ch3);
+    return (0);
 }

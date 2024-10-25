@@ -22,7 +22,6 @@ int main(void)
     int size = 9;
     int array[size];
 
-  //  bzero(array, sizeof(array));
     ft_bzero(array, sizeof(array));
 
     int i = 0;

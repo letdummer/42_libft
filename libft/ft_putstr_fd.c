@@ -24,17 +24,16 @@ int     main(void)
     char    *str = "abcd";
 
     ft_putstr_fd(str, 1); 
-
-        return (0);
+    return (0);
 }
 
 void    ft_putstr_fd(char *s, int fd)
 {
-        int i = 0;
+    int i = 0;
 
-        while (s[i])
-        {
-                ft_putchar_fd(s[i], fd);
-                i++;
-        }
+    while (s[i])
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
 }

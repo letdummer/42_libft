@@ -24,7 +24,6 @@ int main(void)
     char target[ 80 ] = "This is the target string";
 
     printf( "Before, target is:\t \"%s\"\n", target );
-    //memcpy( target, source, 15);
     ft_memcpy( target, source, 15);
     printf( "After, target becomes:\t \"%s\"\n", target );
     return (0);

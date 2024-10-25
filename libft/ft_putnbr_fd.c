@@ -20,15 +20,15 @@ void    ft_putstr_fd(char *s, int fd);
 
 int     main(void)
 {
-        int     n;
-        int     n2;
+    int     n;
+    int     n2;
 
-        n = -2147483648;
-        n2 = 42;
-        ft_putnbr_fd(n, 1);
-        printf("\n");
-        ft_putnbr_fd(n2, 1);
-        return (0);
+    n = -2147483648;
+    n2 = 42;
+    ft_putnbr_fd(n, 1);
+    printf("\n");
+    ft_putnbr_fd(n2, 1);
+    return (0);
 }
 
 void    ft_putnbr_fd(int n, int fd)
@@ -49,16 +49,16 @@ void    ft_putnbr_fd(int n, int fd)
 
 void    ft_putchar_fd(char c, int fd)
 {
-        write(fd, &c, 1);
+    write(fd, &c, 1);
 }
 
 void    ft_putstr_fd(char *s, int fd)
 {
-        int i = 0;
+    int i = 0;
 
-        while (s[i])
-        {
-                ft_putchar_fd(s[i], fd);
-                i++;
-        }
+    while (s[i])
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
 }

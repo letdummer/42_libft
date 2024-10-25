@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+    É PRECISO USAR A FUNCAO ITOA!!
+*/
 
-char    *ft_strlcat(char *dest, const char *src, size_t size);
+
+
+
+
+//#include "libft.h"
+#include <unistd.h>
+
+size_t    *ft_strlcat(char *dest, const char *src, size_t size);
 
 void    ft_putchar_fd(char c, int fd);
 
@@ -23,55 +32,69 @@ size_t ft_strlen(const char *str);
 
 int     main(void)
 {
-        char    *src = "this is ";
-        char    dest[100] = "a string!";
+    char    *src = "this is ";
+    char    dest[100] = "a string!";
+    size_t  nb = 10;
+    size_t  result;
+    char    res_str[20];
 
-        ft_strlcat(dest, src);
-        ft_putstr_fd(dest, 1);
-        return (0);
+    result = ft_strlcat(dest, src, nb);
+    res_str = result;
+    ft_putstr_fd(res_str, 1);
+    return (0);
 }
 
-char    *ft_strlcat(char *dest, const char *src, size_t)
+size_t    *ft_strlcat(char *dest, const char *src, size_t size)
 {
-        int     dest_len = ft_strlen(dest);
-        int     i;
+    size_t  dest_len;
+    size_t  src_len;
+    size_t  result;
+    size_t  i;
 
-        i = 0;
-        while (src[i] != '\0')
-        {
-                dest[dest_len + i] = src[i];
-                i++;
-        }
-        dest[dest_len + i] = '\0';
-        return (dest);
+    i = 0;
+    result = 0;
+    dest_len = ft_strlen(dest);
+    src_len = ft_strlen(src);
+
+    if (size > dest_len)
+        result = src_len + dest_len;
+    else
+        result = src_len + size;
+    while (src[i] && (dest_len + 1) < size)
+    {
+        dest[dest_len] = src[i];
+        dest_len++;
+        i++;
+    }
+    dest[dest_len] = '\0';
+    return (result);
 }
 
 
 void    ft_putchar_fd(char c, int fd)
 {
-        write(fd, &c, 1);
+    write(fd, &c, 1);
 }
 
 void    ft_putstr_fd(char *s, int fd)
 {
-        int i = 0;
+    int i = 0;
 
-        while (s[i])
-        {
-                ft_putchar_fd(s[i], fd);
-                i++;
-        }
+    while (s[i])
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
 }
 
 size_t ft_strlen(const char *str)
 {
-        int     i;
+    size_t     i;
 
-        i = 0;
-        while(str[i] != '\0')
-        {
-                i++;
-        }
-        return(i);
-
+    i = 0;
+    while(str[i] != '\0')
+    {
+        i++;
+    }
+    return(i);
 }
