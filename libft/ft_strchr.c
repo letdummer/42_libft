@@ -14,27 +14,33 @@
 #include <string.h>
 #include <stdio.h>
 
-/* char    *ft_strchr(const char *str, int search_str);
+char    *ft_strchr(const char *str, int c);
 
 int main(void)
 {
+        char *string = "this is a string";
+        const char c = 'a';
+        char *result;
 
+        result = ft_strchr(string, c);
+        printf("String after |%c| is:\t \"%s\"\n", c, result);
+        return (0);
 }
 
-char    *ft_strchr(const char *str, int search_str)
+char    *ft_strchr(const char *str, int c)
 {
+    int i;
+    char    ch;
 
-} */
-
-
-
-int main(void)
-{
-    char *string = "this is a string";
-    const char to_search = 'a';
-    char *result;
-
-    result = strchr(string, to_search);
-    printf("String after |%c| is:\t \"%s\"\n", to_search, result);
-    return (0);
+    i = 0;
+    ch = c;
+    while (str[i] != '\0' )
+    {
+        if (str[i] == ch)
+        {
+            return((char *) &str[i]);
+        }
+        i++;
+    }
+    return (NULL);
 }
