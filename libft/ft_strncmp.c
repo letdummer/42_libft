@@ -1,45 +1,45 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 16:12:17 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/24 16:12:18 by ldummer-         ###   ########.fr       */
-/*                                                                            */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_strncmp.c									   :+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2024/10/24 16:12:17 by ldummer-		  #+#	#+#			 */
+/*   Updated: 2024/10/24 16:12:18 by ldummer-		 ###   ########.fr	   */
+/*																			*/
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strncmp(const char *s1, const char *s2, int n);
+int	ft_strncmp(const char *s1, const char *s2, int n);
 
-int main(void)
+int	main(void)
 {
-    char    *str1 = "113";
-    char    *str2 = "113";
-    int     result;
-    int     n = 2;
+	char	*str1 = "113";
+	char	*str2 = "113";
+	int	result;
+	int	n = 2;
 
-    result =ft_strncmp(str1, str2, n);
-    printf("%d\n", result);
-    if (result == 0)
-        printf("equals\n");
-    else if (result < 0)
-        printf("s1 less than s2\n");
-    else
-        printf("s1 greater than s2\n");
-    return (0);
+	result =ft_strncmp(str1, str2, n);
+	printf("%d\n", result);
+	if (result == 0)
+		printf("equals\n");
+	else if (result < 0)
+		printf("s1 less than s2\n");
+	else
+		printf("s1 greater than s2\n");
+	return (0);
 }
 
-int ft_strncmp(const char *s1, const char *s2, int n)
+int	ft_strncmp(const char *s1, const char *s2, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s1[i] == s2[i] && s1[i] != '\0' && i < n)
-    {
-        i++;
-    }
-    return(s1[i] - s2[i]);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && i < n)
+	{
+		i++;
+	}
+	return(s1[i] - s2[i]);
 }
