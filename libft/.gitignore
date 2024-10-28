@@ -6,3 +6,5 @@ some_comments.md
 *.exe
 
 .pdf
+
+*workspace*
