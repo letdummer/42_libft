@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:06:00 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:06:01 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 int	ft_memcmp(const void *str1, const void *str2, size_t n);
 
 int	main(void)
@@ -27,7 +15,7 @@ int	main(void)
 	else
 		printf("First is greater than second.\n");
 	return (0);
-}
+} */
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {

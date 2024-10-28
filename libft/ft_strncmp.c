@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:28:06 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:28:10 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 int	ft_strncmp(const char *s1, const char *s2, int n);
 
 int	main(void)
@@ -30,7 +18,7 @@ int	main(void)
 	else
 		printf("s1 greater than s2\n");
 	return (0);
-}
+} */
 
 int	ft_strncmp(const char *s1, const char *s2, int n)
 {

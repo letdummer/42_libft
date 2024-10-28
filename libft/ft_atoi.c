@@ -1,22 +1,10 @@
-/* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_atoi.c										  :+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/24 16:10:14 by ldummer-		  #+#	#+#			 */
-/*   Updated: 2024/10/24 16:10:16 by ldummer-		 ###   ########.fr	   */
-/*																			*/
-/* ************************************************************************** */
-
 #include "libft.h"
 
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);
 int					ft_atoi(const char *str);
 
-int	main(void)
+/* int	main(void)
 {
 	char	*string;
 	int		result;
@@ -25,7 +13,7 @@ int	main(void)
 	result = ft_atoi(string);
 	printf("%i\n", result);
 	return (0);
-}
+} */
 
 int	ft_atoi(const char *str)
 {

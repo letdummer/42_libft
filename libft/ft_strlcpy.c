@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_strlcpy.c									   :+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/24 16:12:05 by ldummer-		  #+#	#+#			 */
-/*   Updated: 2024/10/24 16:12:06 by ldummer-		 ###   ########.fr	   */
-/*																			*/
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 int	main(void)
@@ -26,7 +14,7 @@ int	main(void)
 	r = ft_strlcpy(dest, source, 5);
 	printf("CREATED:\nCopied '%s' into '%s'\nLength: '%d'\n", source, dest, r);
 	return (0);
-}
+} */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -1,21 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:31:18 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:31:19 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-char		*ft_strtrim(char const *s1, char const *set);
 static int	ft_to_ignore(const char *s, char c);
 static char	*ft_new_string(const char *s1, size_t start, size_t len);
-
+/* 
+char		*ft_strtrim(char const *s1, char const *set);
 size_t		ft_strlen(const char *str);
 
 int	main(void)
@@ -29,7 +17,7 @@ int	main(void)
 	printf("%s\n", result);
 	free (result);
 	return (0);
-}
+} */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -78,7 +66,7 @@ static char	*ft_new_string(const char *s1, size_t start, size_t len)
 		i++;
 	}
 	return (str);
-}
+}/* 
 
 size_t	ft_strlen(const char *str)
 {
@@ -90,4 +78,4 @@ size_t	ft_strlen(const char *str)
 		i++;
 	}
 	return (i);
-}
+} */

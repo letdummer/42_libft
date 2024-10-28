@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:33:06 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:33:07 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *str1);
 void	*ft_calloc(size_t nitems, size_t size);
@@ -30,7 +18,7 @@ int	main(void)
 		printf("%s\n", result);
 	free(result);
 	return (0);
-}
+} */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -56,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	newstring[i] = '\0';
 	return (newstring);
-}
+}/* 
 
 char	*ft_strdup(const char *str1)
 {
@@ -103,4 +91,4 @@ void	*ft_calloc(size_t nitems, size_t size)
 		i++;
 	}
 	return (ptr);
-}
+} */

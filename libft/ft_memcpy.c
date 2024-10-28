@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_memcpy.c										:+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/24 16:10:57 by ldummer-		  #+#	#+#			 */
-/*   Updated: 2024/10/24 16:10:58 by ldummer-		 ###   ########.fr	   */
-/*																			*/
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 void	*ft_memcpy(void *dest, const void *src, size_t count);
 
 int	main(void)
@@ -23,7 +11,7 @@ int	main(void)
 	ft_memcpy(target, source, 15);
 	printf("After, target becomes:\t \"%s\"\n", target);
 	return (0);
-}
+} */
 
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {

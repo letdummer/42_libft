@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:17:21 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:17:25 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 char	*ft_strdup(const char *str1);
 
 size_t	ft_strlen(const char *str);
@@ -28,7 +16,7 @@ int	main(void)
 		printf("The new string is: %s\n", newstr);
 	free(newstr);
 	return (0);
-}
+} */
 
 char	*ft_strdup(const char *str1)
 {
@@ -46,7 +34,7 @@ char	*ft_strdup(const char *str1)
 	}
 	new_string[i] = '\0';
 	return (new_string);
-}
+}/* 
 
 size_t	ft_strlen(const char *str)
 {
@@ -58,4 +46,4 @@ size_t	ft_strlen(const char *str)
 		i++;
 	}
 	return (i);
-}
+} */

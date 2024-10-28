@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:28:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:28:27 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 char	*ft_strnstr(const char *big,	const char *little, size_t len);
 
 int	main(void)
@@ -26,7 +14,7 @@ int	main(void)
 	else
 		printf("Substring not found within the limit.\n");
 	return (0);
-}
+} */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_putendl_fd.c									:+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/24 16:11:32 by ldummer-		  #+#	#+#			 */
-/*   Updated: 2024/10/24 16:11:33 by ldummer-		 ###   ########.fr	   */
-/*																			*/
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 void	ft_putendl_fd(char *s, int fd);
 
 int	main(void)
@@ -20,7 +8,7 @@ int	main(void)
 
 	ft_putendl_fd(string, 1);
 	return (0);
-}
+} */
 
 void	ft_putendl_fd(char *s, int fd)
 {

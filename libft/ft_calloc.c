@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:43:31 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:43:32 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size);
+/* void	*ft_calloc(size_t nitems, size_t size);
 
 int	main(void)
 {
@@ -47,7 +35,7 @@ int	main(void)
 		free(array);
 	}
 	return (0);
-}
+} */
 
 void	*ft_calloc(size_t nitems, size_t size)
 {

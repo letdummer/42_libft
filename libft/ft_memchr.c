@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:04:38 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:04:38 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
-void	*ft_memchr(const void *str, int c, size_t n);
+/*
+ void	*ft_memchr(const void *str, int c, size_t n);
 
 int	main(void)
 {
@@ -28,7 +16,7 @@ int	main(void)
 	else
 		printf("the string after |%c| is |%s|\n", ch, result);
 	return (0);
-}
+} */
 
 void	*ft_memchr(const void *str, int c, size_t n)
 	{

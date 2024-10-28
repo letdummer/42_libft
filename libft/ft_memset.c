@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_memset.c										:+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: ldummer- <marvin@42.fr>					+#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/24 16:11:05 by ldummer-		  #+#	#+#			 */
-/*   Updated: 2024/10/24 16:11:06 by ldummer-		 ###   ########.fr	   */
-/*																			*/
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 void	*ft_memset(void *str, int c, size_t n);
 
 int	main(void)
@@ -22,7 +10,7 @@ int	main(void)
 	ft_memset(str, '#', 4);
 	printf("After ft_memset(): %s\n", str);
 	return (0);
-}
+} */
 
 void	*ft_memset(void *str, int c, size_t n)
 {

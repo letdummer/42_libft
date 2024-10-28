@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:30:24 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/28 14:30:25 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+/* 
 char	*ft_strrchr(const char *str, int c);
 
 int	main(void)
@@ -23,7 +11,7 @@ int	main(void)
 	res = ft_strrchr(str, ch);
 	printf("Last occurency of |%c| is:\t \"%s\"\n", ch, res);
 	return (0);
-}
+} */
 
 char	*ft_strrchr(const char *str, int c)
 {
