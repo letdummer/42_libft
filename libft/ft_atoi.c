@@ -10,9 +10,7 @@
 /*																			*/
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-#include <stdio.h>
+#include "libft.h"
 
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);

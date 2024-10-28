@@ -13,11 +13,9 @@
 /*
 	É PRECISO USAR A FUNCAO ITOA!!
 */
-//#include "libft.h"
-#include <unistd.h>
+#include "libft.h"
 
 size_t	*ft_strlcat(char *dest, const char *src, size_t size);
-
 size_t	ft_strlen(const char *str);
 
 void	ft_putchar_fd(char c, int fd);
