@@ -7,7 +7,7 @@ static char	*ft_conv(int len);
 static void long_to_char(long nb, char* string, int i);
 static size_t		ft_len(long nb);
 
-int	main(void)
+/* int	main(void)
 {
 	int		value;
 	char	*result;
@@ -17,7 +17,7 @@ int	main(void)
 	printf("%s\n", result);
 	free (result);
 	return (0);
-}
+} */
 
 char	*ft_itoa(int n)
 {
