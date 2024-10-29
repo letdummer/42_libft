@@ -4,8 +4,8 @@
 
 char		*ft_itoa(int n);
 static char	*ft_conv(int len);
-
-size_t		ft_len(long nb);
+static void long_to_char(long nb, char* string, int i);
+static size_t		ft_len(long nb);
 
 int	main(void)
 {
@@ -32,21 +32,7 @@ char	*ft_itoa(int n)
 	if (string == NULL)
 		return (NULL);
 	i = len_n - 1;
-	if (nb == 0)
-		string[0] = '0';
-	else
-	{
-		if (nb < 0)
-		{
-			string[0] = '-';
-			nb = -nb;
-		}
-		while (nb > 0)
-		{
-			string[i--] = ((nb % 10) + '0');
-			nb = nb / 10;
-		}
-	}
+	long_to_char(nb, string,i);
 	string[len_n] = '\0';
 	return (string);
 }
@@ -61,7 +47,7 @@ static char	*ft_conv(int len)
 	return (str);
 }
 
-size_t	ft_len(long nb)
+static size_t	ft_len(long nb)
 {
 	int	i;
 
@@ -79,4 +65,24 @@ size_t	ft_len(long nb)
 		i++;
 	}
 	return (i);
+}
+
+static void long_to_char(long nb, char* string, int i)
+{
+		if (nb == 0)
+		string[0] = '0';
+	else
+	{
+		if (nb < 0)
+		{
+			string[0] = '-';
+			nb = -nb;
+		}
+		while (nb > 0)
+		{
+			string[i--] = ((nb % 10) + '0');
+			nb = nb / 10;
+		}
+	}
+	
 }
