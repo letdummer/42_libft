@@ -7,17 +7,27 @@ static char	*ft_conv(int len);
 static void long_to_char(long nb, char* string, int i);
 static size_t		ft_len(long nb);
 
-/* int	main(void)
+int	main(void)
 {
-	int		value;
+	int		test_values[] = {123, -456, 0, 2147483647, -2147483648};
+	int		num_tests = sizeof(test_values) / sizeof(test_values[0]);
 	char	*result;
 
-	value = -1234567;
-	result = ft_itoa(value);
-	printf("%s\n", result);
-	free (result);
-	return (0);
-} */
+	printf("Testing ft_itoa with different integer values:\n");
+	for (int i = 0; i < num_tests; i++)
+	{
+		result = ft_itoa(test_values[i]);
+		if (result != NULL)
+		{
+			printf("ft_itoa(%d) = \"%s\"\n", test_values[i], result);
+			free(result); 
+		}
+		else
+		{
+			printf("ft_itoa(%d) returned NULL (allocation failed)\n", test_values[i]);
+		}
+	}
+}
 
 char	*ft_itoa(int n)
 {
