@@ -8,7 +8,7 @@ size_t	ft_strlen(const char *str);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-
+/* 
 int	main(void)
 {
 	char	*src = "this is ";
@@ -21,7 +21,7 @@ int	main(void)
 	res_str = result;
 	ft_putstr_fd(res_str, 1);
 	return (0);
-}
+} */
 
 size_t	*ft_strlcat(char *dest, const char *src, size_t size)
 {

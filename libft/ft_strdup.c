@@ -34,8 +34,9 @@ char	*ft_strdup(const char *str1)
 	}
 	new_string[i] = '\0';
 	return (new_string);
-}/* 
+}
 
+/* 
 size_t	ft_strlen(const char *str)
 {
 	int	i;

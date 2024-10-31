@@ -5,14 +5,13 @@
 
 char			**ft_split(char const *s, char c);
 static size_t	ft_count(const char *str, char c);
-static char 	*ft_fill_word(const char *str, int start, int end);
-static void 	*ft_alloca(char **strings, int k);
+static char		*ft_fill_word(const char *str, int start, int end);
+static void		*ft_alloca(char **strings, int k);
 
-size_t	ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 
-
-void	*ft_calloc(size_t nitems, size_t size);
-
+void			*ft_calloc(size_t nitems, size_t size);
+/* 
 int	main(void)
 {
 	char string[16] = "string -to-split";
@@ -20,7 +19,7 @@ int	main(void)
 	char	ch = ' ';
 	int		i = 0;
    
-/* 	char str[16] = "string -to-split";
+ 	char str[16] = "string -to-split";
 	char	*res;
 	res = strtok(str, "  ");
  	printf("\n\tORIGINAL FUNCTION:\n");
@@ -28,7 +27,7 @@ int	main(void)
     while (res != NULL) {
         printf(" %s\n", res);
         res = strtok(NULL, " ");
-    } */
+    } 
 
 	printf("---------------------------\n");
 	result = ft_split(string, ch);
@@ -50,19 +49,18 @@ int	main(void)
     }
     free(result);
 	return (0);
-}
+} */
 
 char	**ft_split(char const *s, char c)
 {
 	char	**string;
 	int		s_word;
-	size_t		i;
+	size_t	i;
 	int		j;
 
 	i = 0;
 	j = 0;
 	s_word = -1;
-
 	string = ft_calloc((ft_count(s, c) + 1), sizeof(char *));
 	if (!string)
 		return (NULL);
@@ -74,8 +72,8 @@ char	**ft_split(char const *s, char c)
 		{
 			string[j] = ft_fill_word(s, s_word, i);
 			if (!(string[j]))
-				return (ft_alloca(string, j));
-			s_word = - 1;
+				return (ft_alloca (string, j));
+			s_word = -1;
 			j++;
 		}
 		i++;
@@ -93,7 +91,7 @@ static size_t	ft_count(const char *str, char c)
 	while (*str)
 	{
 		if (*str != c && j == 0)
-		{	
+		{
 			j = 1;
 			i++;
 		}
@@ -104,7 +102,7 @@ static size_t	ft_count(const char *str, char c)
 	return (i);
 }
 
-static void *ft_alloca(char **strings, int k)
+static void	*ft_alloca(char **strings, int k)
 {
 	int	i;
 
@@ -118,7 +116,7 @@ static void *ft_alloca(char **strings, int k)
 	return (NULL);
 }
 
-static char *ft_fill_word(const char *str, int start, int end)
+static char	*ft_fill_word(const char *str, int start, int end)
 {
 	char	*word;
 	int		i;
@@ -136,7 +134,6 @@ static char *ft_fill_word(const char *str, int start, int end)
 	word[i] = 0;
 	return (word);
 }
-
 
 void	*ft_calloc(size_t nitems, size_t size)
 {

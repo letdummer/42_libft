@@ -66,8 +66,9 @@ static char	*ft_new_string(const char *s1, size_t start, size_t len)
 		i++;
 	}
 	return (str);
-}/* 
+}
 
+/* 
 size_t	ft_strlen(const char *str)
 {
 	int	i;

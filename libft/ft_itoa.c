@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char		*ft_itoa(int n);
-static char	*ft_conv(int len);
-static void long_to_char(long nb, char* string, int i);
+char				*ft_itoa(int n);
+static char			*ft_conv(int len);
+static void			long_to_char(long nb, char *string, int i);
 static size_t		ft_len(long nb);
-
+/* 
 int	main(void)
 {
 	int		test_values[] = {123, -456, 0, 2147483647, -2147483648};
@@ -24,10 +24,10 @@ int	main(void)
 		}
 		else
 		{
-			printf("ft_itoa(%d) returned NULL (allocation failed)\n", test_values[i]);
+			printf("ft_itoa(%d) returned NULL\n", test_values[i]);
 		}
 	}
-}
+} */
 
 char	*ft_itoa(int n)
 {
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	if (string == NULL)
 		return (NULL);
 	i = len_n - 1;
-	long_to_char(nb, string,i);
+	long_to_char(nb, string, i);
 	string[len_n] = '\0';
 	return (string);
 }
@@ -77,9 +77,9 @@ static size_t	ft_len(long nb)
 	return (i);
 }
 
-static void long_to_char(long nb, char* string, int i)
+static void	long_to_char(long nb, char *string, int i)
 {
-		if (nb == 0)
+	if (nb == 0)
 		string[0] = '0';
 	else
 	{
@@ -94,5 +94,4 @@ static void long_to_char(long nb, char* string, int i)
 			nb = nb / 10;
 		}
 	}
-	
 }

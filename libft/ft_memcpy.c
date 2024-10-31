@@ -16,9 +16,11 @@ int	main(void)
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
 	size_t		i;
-	const char	*source = src;
-	char		*destin = dest;
+	const char	*source;
+	char		*destin;
 
+	source = src;
+	destin = dest;
 	i = 0;
 	while (source[i] != '\0' && i <= count)
 	{

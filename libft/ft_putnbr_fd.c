@@ -31,8 +31,10 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		nbr = (unsigned int)n;
 	if (nbr >= 10)
+	{
 		ft_putnbr_fd(nbr / 10, fd);
 		ft_putchar_fd((char)(nbr % 10 + 48), fd);
+	}
 }
 /* 
 void	ft_putchar_fd(char c, int fd)

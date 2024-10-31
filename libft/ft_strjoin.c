@@ -39,8 +39,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	str[i] = '\0';
 	return (str);
-}/* 
+}
 
+/* 
 size_t	ft_strlen(const char *str)
 {
 	int	i;

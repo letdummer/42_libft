@@ -1,8 +1,8 @@
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 static void	ft_transform(unsigned int i, char *c);
-
+/* 
 int	main(void)
 {
 	char	strings[][20] = {
@@ -24,7 +24,7 @@ int	main(void)
 		i++;
 	}
 	return (0);
-}
+} */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -38,8 +38,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-static void ft_transform(unsigned int i, char *c)
+static void	ft_transform(unsigned int i, char *c)
 {
-    if (i % 2 == 0)
-    	*c = '#';
+	if (i % 2 == 0)
+		*c = '#';
 }

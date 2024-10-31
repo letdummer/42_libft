@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 static char	ft_transform(unsigned int i, char c);
 
 size_t	ft_strlen(const char *str)
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
+/* 
 int	main(void)
 {
 	char	*string[] = {
@@ -49,13 +49,15 @@ int	main(void)
 		i++;
 	}
 	return (0);
-}
+} */
 
-static char ft_transform(unsigned int i, char c) {
-    if (i % 2 == 0) {
-        return (c = '#');
-    }
-    return c; 
+static char	ft_transform(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+	{
+		return (c = '#');
+	}
+	return (c);
 }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

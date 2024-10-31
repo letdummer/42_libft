@@ -44,8 +44,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	newstring[i] = '\0';
 	return (newstring);
-}/* 
+}
 
+/* 
 char	*ft_strdup(const char *str1)
 {
 	char	*new_string;
