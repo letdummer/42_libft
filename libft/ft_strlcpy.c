@@ -18,24 +18,26 @@ int	main(void)
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
+	size_t	i;
 
-	i = 0;
+	if (dstsize == 0)
+	{
+		i = 0;
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
 	if (dstsize > 0)
 	{
-		while (*(src + i) != '\0')
+		i = 0;
+		while (src[i] != '\0' && i < dstsize - 1)
 		{
-			if (i == dstsize)
-			{
-				i--;
-				break ;
-			}
-			*(dst + i) = *(src + i);
+			dst[i] = src[i];
 			i++;
 		}
 	}
-	*(dst + i) = '\0';
-	while (*(src + i) != '\0')
+	dst[i] = '\0';
+	while (src[i] != '\0')
 		i++;
 	return (i);
 }

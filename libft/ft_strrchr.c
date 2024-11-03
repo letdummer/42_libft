@@ -11,8 +11,8 @@ int	main(void)
 	res = ft_strrchr(str, ch);
 	printf("Last occurency of |%c| is:\t \"%s\"\n", ch, res);
 	return (0);
-} */
-
+}
+*/
 char	*ft_strrchr(const char *str, int c)
 {
 	int		i;

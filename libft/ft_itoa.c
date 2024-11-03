@@ -1,12 +1,10 @@
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-char				*ft_itoa(int n);
 static char			*ft_conv(int len);
 static void			long_to_char(long nb, char *string, int i);
 static size_t		ft_len(long nb);
 /* 
+char				*ft_itoa(int n);
 int	main(void)
 {
 	int		test_values[] = {123, -456, 0, 2147483647, -2147483648};

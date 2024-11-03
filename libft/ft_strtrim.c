@@ -4,35 +4,59 @@ static int	ft_to_ignore(const char *s, char c);
 static char	*ft_new_string(const char *s1, size_t start, size_t len);
 /* 
 char		*ft_strtrim(char const *s1, char const *set);
-size_t		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 int	main(void)
 {
-	char const	*string = "123this  is a  123   string.123";
-	char		*set = "123";
-	char		*result;
+	char *result;
 
-	result = ft_strtrim(string, set);
-	printf("%s\n", string);
-	printf("%s\n", result);
-	free (result);
+	printf("\n*************************\n");
+	printf("*\tTesting\t\t*");
+	printf("\n*************************\n");
+	result = ft_strtrim("", " ");
+	printf("Trim empty string: |%s|\n", result);
+	free(result);
+	result = ft_strtrim("   ", " ");
+	printf("Trim only spaces: |%s|\n", result);
+	free(result);
+	result = ft_strtrim("Hello", " ");
+	printf("Trim no spaces: |%s|\n", result);
+	free(result);
+	result = ft_strtrim("   Hello World   ", " ");
+	printf("Trim with spaces: |%s|\n", result);
+	free(result);
+	result = ft_strtrim("--Hello--World--", "-");
+	printf("Trim with dashes: |%s|\n", result);
+	free(result);
 	return (0);
 } */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	i = 0;
-	j = ft_strlen(s1) - 1;
+	j = ft_strlen(s1);
 	if (ft_strlen(s1) == 0)
 		return (0);
-	while (ft_to_ignore(set, s1[i]))
+	while (s1[i] && ft_to_ignore(set, s1[i]))
 		i ++;
-	while (ft_to_ignore(set, s1[j]))
+	while (j > i && ft_to_ignore(set, s1[j - 1]))
 		j--;
-	return (ft_new_string(s1, i, j - (i - 1)));
+	return (ft_new_string(s1, i, j - 1));
 }
 
 static int	ft_to_ignore(const char *s, char c)
@@ -54,9 +78,7 @@ static char	*ft_new_string(const char *s1, size_t start, size_t len)
 	char	*str;
 	size_t	i;
 
-	if (len <= 0 || start >= ft_strlen(s1))
-		return (0);
-	str = malloc (sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -65,18 +87,6 @@ static char	*ft_new_string(const char *s1, size_t start, size_t len)
 		str[i] = s1[start + i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
-
-/* 
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-} */

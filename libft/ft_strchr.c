@@ -15,18 +15,18 @@ int	main(void)
 
 char	*ft_strchr(const char *str, int c)
 {
-	int		i;
 	char	ch;
 
-	i = 0;
-	ch = c;
-	while (str[i] != '\0' )
+	ch = (char)c;
+	while (*str != '\0' )
 	{
-		if (str[i] == ch)
+		if (*str == ch)
 		{
-			return ((char *) &str[i]);
+			return ((char *)str);
 		}
-		i++;
+		str++;
 	}
+	if (ch == '\0')
+		return ((char *) str);
 	return (NULL);
 }

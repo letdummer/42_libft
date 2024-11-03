@@ -2,8 +2,18 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return (c >= '0' && c <= '9');
 }
+
+/* int	main(void)
+{
+	int i = 'a';
+	int result;
+
+	while (i <= 'z')
+	{
+		result = ft_isdigit(i);
+		printf("%d", result);
+		i++;
+	}
+} */

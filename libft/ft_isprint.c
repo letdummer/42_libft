@@ -11,3 +11,16 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
+
+/* int main(void)
+{
+	int result;
+	int c;
+	c = 0;
+	while (c <= 47)
+	{
+		result = ft_isprint(c);
+		printf("%d", result);
+		c++;
+	}
+} */

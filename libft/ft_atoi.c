@@ -1,22 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:28:39 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/10/31 14:28:40 by ldummer-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);
+/*
 int					ft_atoi(const char *str);
-
-/* int	main(void)
+ int	main(void)
 {
 	char	*string;
 	int		result;

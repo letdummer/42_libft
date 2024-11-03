@@ -2,13 +2,11 @@
 	É PRECISO USAR A FUNCAO ITOA!!
 */
 #include "libft.h"
-
+/* 
 size_t	*ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
-
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-/* 
 int	main(void)
 {
 	char	*src = "this is ";
@@ -23,7 +21,7 @@ int	main(void)
 	return (0);
 } */
 
-size_t	*ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;
 	size_t	src_len;
@@ -48,7 +46,7 @@ size_t	*ft_strlcat(char *dest, const char *src, size_t size)
 	return (result);
 }
 
-void	ft_putchar_fd(char c, int fd)
+/* void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
@@ -76,3 +74,4 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+ */
