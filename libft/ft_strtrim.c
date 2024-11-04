@@ -2,7 +2,8 @@
 
 static int	ft_to_ignore(const char *s, char c);
 static char	*ft_new_string(const char *s1, size_t start, size_t len);
-/* 
+
+/////////////////////////////////////////////////
 char		*ft_strtrim(char const *s1, char const *set);
 size_t	ft_strlen(const char *str)
 {
@@ -23,41 +24,52 @@ int	main(void)
 	printf("\n*************************\n");
 	printf("*\tTesting\t\t*");
 	printf("\n*************************\n");
-	result = ft_strtrim("", " ");
+
+	result = ft_strtrim("", "");
 	printf("Trim empty string: |%s|\n", result);
 	free(result);
+
 	result = ft_strtrim("   ", " ");
 	printf("Trim only spaces: |%s|\n", result);
 	free(result);
+
 	result = ft_strtrim("Hello", " ");
 	printf("Trim no spaces: |%s|\n", result);
 	free(result);
+
 	result = ft_strtrim("   Hello World   ", " ");
 	printf("Trim with spaces: |%s|\n", result);
 	free(result);
+
 	result = ft_strtrim("--Hello--World--", "-");
+	printf("Trim with dashes: |%s|\n", result);
+
+	result = ft_strtrim(".teste, bla ,.,.", ",.");
 	printf("Trim with dashes: |%s|\n", result);
 	
 	result = ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " ");
 	printf("Trim: |%s|\n", result);
 
-	result = ft_strtrim("--Hello--World--", "-");
+	result = ft_strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ", " \n\t");
 	printf("Trim with dashes: |%s|\n", result);
+
 	free(result);
 	return (0);
-} */
+} /////////////////////////////////////////////////
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
+	int	len;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
+	len = ft_strlen(s1);
+	if (len == 0)
+		return (ft_new_string("", 0 ,0));
 	i = 0;
-	j = ft_strlen(s1);
-	if (ft_strlen(s1) == 0)
-		return (0);
+	j = len;
 	while (s1[i] && ft_to_ignore(set, s1[i]))
 		i ++;
 	while (j > i && ft_to_ignore(set, s1[j - 1]))
@@ -67,7 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 static int	ft_to_ignore(const char *s, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -85,8 +97,14 @@ static char	*ft_new_string(const char *s1, size_t start, size_t len)
 	size_t	i;
 
 	str = (char *)malloc((len + 1) * sizeof(char));
+
 	if (str == NULL)
 		return (NULL);
+	if (len == 0)
+	{
+		str[0] = '\0';
+		return (str);
+	}
 	i = 0;
 	while (i < len)
 	{
