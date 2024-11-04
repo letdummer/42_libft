@@ -37,6 +37,12 @@ int	main(void)
 	free(result);
 	result = ft_strtrim("--Hello--World--", "-");
 	printf("Trim with dashes: |%s|\n", result);
+	
+	result = ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " ");
+	printf("Trim: |%s|\n", result);
+
+	result = ft_strtrim("--Hello--World--", "-");
+	printf("Trim with dashes: |%s|\n", result);
 	free(result);
 	return (0);
 } */
@@ -56,7 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i ++;
 	while (j > i && ft_to_ignore(set, s1[j - 1]))
 		j--;
-	return (ft_new_string(s1, i, j - 1));
+	return (ft_new_string(s1, i, j));
 }
 
 static int	ft_to_ignore(const char *s, char c)

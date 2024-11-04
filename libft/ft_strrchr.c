@@ -4,15 +4,16 @@ char	*ft_strrchr(const char *str, int c);
 
 int	main(void)
 {
-	const char	str[] = "this is a string";
-	const char	ch = 's';
+//	const char	str[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	const char	str[] = "\0";
+	const char	ch = 'a';
 	char		*res;
 
-	res = ft_strrchr(str, ch);
-	printf("Last occurency of |%c| is:\t \"%s\"\n", ch, res);
+	res = strrchr(str, ch);
+	printf("Last occurency of |%d| is: |%s|\n", ch, res);
 	return (0);
-}
-*/
+} */
+
 char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
@@ -21,12 +22,16 @@ char	*ft_strrchr(const char *str, int c)
 
 	i = 0;
 	ch = (char) c;
-	result = NULL;
-	while (str[i] != '\0')
+	if (!str || !c)
+		return (NULL);
+	else
 	{
-		if (str[i] == ch)
-			result = (char *) &str[i];
-		i++;
+		while (str[i] != '\0')
+		{
+			if (str[i] == ch)
+				result = (char *) &str[i];
+			i++;
+		}
+		return (result);
 	}
-	return (result);
 }

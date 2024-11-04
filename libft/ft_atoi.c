@@ -4,7 +4,7 @@
 
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);
-
+/* 
 int					ft_atoi(const char *str);
 int	main(void)
 {
@@ -19,7 +19,7 @@ int	main(void)
 	printf("CREATED: atoi: %d\n", ft_atoi("2147483647"));
 
 	return (0);
-}
+} */
 
 int	ft_atoi(const char *str)
 {

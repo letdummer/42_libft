@@ -4,12 +4,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t count);
 
 int	main(void)
 {
-	char	*source = NULL;
-	char	*target = NULL;
+	char	source[] = "abcedf";
+	char	dest[] = "";
 
-	printf("Before, target is:\t \"%s\"\n", target);
-	ft_memcpy(target, source, 15);
-	printf("After, target becomes:\t \"%s\"\n", target);
+	printf("Before, target is:\t \"%s\"\n", source);
+	ft_memcpy(dest, source, strlen(source) +1);
+	printf("After, target becomes:\t \"%s\"\n", dest);
 	return (0);
 } */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	unsigned char		*destin;
 
 	if (!dest || !src)
-		return (NULL);
+		return (dest);
 	source = (const unsigned char *) src;
 	destin = (unsigned char *) dest;
 	i = 0;

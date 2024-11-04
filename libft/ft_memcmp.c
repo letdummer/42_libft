@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/* 
 int	ft_memcmp(const void *str1, const void *str2, size_t n);
 
 int	main(void)
@@ -45,7 +45,7 @@ int	main(void)
     printf("Test 7: Compare 'Hello' and 'Hello, World!': %d (expected 0)\n", result);
 
 	return (0);
-}
+} */
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
