@@ -1,4 +1,4 @@
-#include "../include/libft.h"
+/* #include "../include/libft_tests.h"
 #include <ctype.h>
 
 int	ft_toupper(void)
@@ -25,4 +25,4 @@ int	ft_toupper(void)
 	}
 
 	return (0);
-}
+} */

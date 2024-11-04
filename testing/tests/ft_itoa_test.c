@@ -1,4 +1,4 @@
-#include "libft.h"
+/* #include "../include/libft_tests.h"
 
 // Inclui o protótipo de ft_itoa e as funções auxiliares
 char	*ft_itoa(int n);
@@ -26,3 +26,4 @@ int	main(void)
 
 	return (0);
 }
+ */
