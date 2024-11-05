@@ -1,27 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 15:43:56 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 20:14:12 by lethallyn        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-/* 
-void	*ft_memcpy(void *dest, const void *src, size_t count);
-
-int	main(void)
-{
-	char	source[] = "abcedf";
-	char	dest[] = "";
-
-	printf("Before, target is:\t \"%s\"\n", source);
-	ft_memcpy(dest, source, strlen(source) +1);
-	printf("After, target becomes:\t \"%s\"\n", dest);
-	return (0);
-} */
-
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
-	size_t		i;
-	const unsigned char	*source;
-	unsigned char		*destin;
+	size_t				i;
+	unsigned const char	*source;
+	unsigned char	*destin;
 
-	if (!dest || !src)
+	if (dest == (void *)0 && src == (void *)0)
 		return (dest);
-	source = (const unsigned char *) src;
+	source = (unsigned const char *) src;
 	destin = (unsigned char *) dest;
 	i = 0;
 	while (i < count)
@@ -31,6 +29,22 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	}
 	return (destin);
 }
+/* int	main(void)
+{
+	char	source[] = "abcedf";
+	char	dest[50];
+	char	*res;
+	//char	source[] = NULL;
+	//char	dest[] = "segfaulter tu dois";
+
+	//printf("Before, target is:\t \"%s\"\n", source);
+	res = ft_memcpy(dest, source, 17);
+	printf("After, target becomes:\t \"%s\"\n", res);
+	return (0);
+} 
+ */
+
+
 
 /* void print_array(void *ptr, size_t jump, int n)
 {

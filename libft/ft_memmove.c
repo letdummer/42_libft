@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 15:43:59 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 16:02:03 by lethallyn        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /* 
 void	*ft_memmove(void *dest, const void *src, size_t count);
@@ -17,17 +29,17 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 {
 	unsigned char	*source;
 	unsigned char	*destin;
-	size_t		i;
+	size_t			i;
 
-	if(!dest && !src)
+	if (!dest && !src)
 		return (NULL);
 	source = (unsigned char *)src;
 	destin = (unsigned char *) dest;
-	if((size_t)dest - (size_t)src < count)
+	if ((size_t)dest - (size_t)src < count)
 	{
-	i = count;
-	while (--i < count)
-		destin[i] = source[i];
+		i = count;
+		while (--i < count)
+			destin[i] = source[i];
 	}
 	else
 	{

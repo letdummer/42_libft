@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 15:42:55 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 18:18:36 by lethallyn        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 #include <stdio.h>
@@ -9,6 +21,12 @@ int					ft_atoi(const char *str);
 int	main(void)
 {
 	
+	printf("ORIGINAL: atoi: %d\n", atoi("   + 123 "));
+	printf("CREATED: atoi: %d\n", ft_atoi("   + 123 "));
+	printf("\n");
+	printf("ORIGINAL: atoi: %d\n", atoi("   -123"));
+	printf("CREATED: atoi: %d\n", ft_atoi("   -123"));
+	printf("\n");
 	printf("ORIGINAL: atoi: %d\n", atoi("-999999999999"));
 	printf("CREATED: atoi: %d\n", ft_atoi("-999999999999"));
 	printf("\n");

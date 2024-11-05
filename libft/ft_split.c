@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 15:45:05 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 15:52:44 by lethallyn        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_count(const char *str, char c);
 static char		*ft_fill_word(const char *str, int start, int end);
 static void		*ft_alloca(char **strings, int k);
-static char			**ft_initialize_vars(const char *s, char c, char ***string,
-	int *s_word, size_t *i, size_t *j);
+static char		**ft_initialize_vars(const char *s, char c, char ***string,
+		int *s_word, size_t *i, size_t *j);
 /* /////////////////////////////////////////////////////////////
  void			*ft_calloc(size_t nitems, size_t size);
 size_t			ft_strlen(const char *str);

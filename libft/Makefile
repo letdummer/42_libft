@@ -1,3 +1,17 @@
+# Definindo as cores ANSI
+RED    := \e[1;31m
+GREEN  := \e[1;32m	
+PURPLE := \e[0;35m
+BLUE   := \e[0;34m
+
+RESET  := \033[0m
+
+# Funções para imprimir texto com cores
+text = @echo "$(PURPLE)$(1)$(RESET)"
+warn = @echo "$(BLUE)$(1)$(RESET)"
+error = @echo "$(RED)$(1)$(RESET)"
+success = @echo "$(GREEN)$(1)$(RESET)"
+
 #################### Files #####################
 NAME= libft.a
 
@@ -22,28 +36,49 @@ RM= rm -f
 	ft_strlcpy.c	ft_strlen.c		ft_strmapi.c	ft_strncmp.c \
 	ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c \
 	ft_toupper.c	ft_tolower.c
+
+
+#################### Help #####################
+help:
+	@echo "Opções disponíveis:"
+	@echo "$(PURPLE)make            - Compila o projeto e cria a biblioteca $(NAME).$(RESET)"
+	@echo "$(PURPLE)make clean      - Remove arquivos objeto (.o).$(RESET)"
+	@echo "$(PURPLE)make fclean     - Remove arquivos objeto e a biblioteca $(NAME).$(RESET)"
+	@echo "$(PURPLE)make re         - Limpa e recompila o projeto.$(RESET)"
+	@echo "$(PURPLE)make help       - Exibe esta ajuda.$(RESET)"
+
 ################################################
+.DEFAULT_GOAL := all
 
 all: $(NAME)
-	@echo "Build complete: $(NAME)"
 
 $(NAME): $(OBJ_DIR)
-	ar rcs $(NAME) $(OBJ_DIR)
-	@echo "Creating library archive: $(NAME)"
+	$(call success, "All files have been compiled ✅")
+	$(call text, "Creating library $(NAME) [...]")
+	@ar rcs $(NAME) $(OBJ_DIR)
+	$(call success, "Build complete: $(NAME) ✅ ✨")
 
 %.o: %.c $(H_FILES)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(call warn, "Compiling [...] $<")
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 ################ Clean-up Rules ################
 clean:
-	$(RM) $(OBJ_DIR)
-	@echo "Object files cleaned."
+	$(call text, "Removing object files [...]")
+	@$(RM) $(OBJ_DIR)
+	$(call success, "Object files cleaned. ✨"); \
 
 fclean: clean
-	$(RM) $(NAME)
-	@echo "Library file cleaned."
+	$(call text, "Removing library file...")
+	@$(RM) $(NAME)
+	$(call success, "Library file cleaned. ✨")
 
 re: fclean all
-	@echo "Cleaning and re-compiling [...]"
+	$(call success, "Cleaning and re-compiling [...]")
 
-.PHONY: all clean fclean re
+
+-include $(wildcard .makeoptions)
+ifeq ($(MAKECMDGOALS),)
+.DEFAULT_GOAL := all
+endif
+.PHONY: all clean fclean re help
