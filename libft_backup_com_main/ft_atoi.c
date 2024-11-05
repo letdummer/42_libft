@@ -1,14 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 15:42:55 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 21:12:46 by lethallyn        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 #include <stdio.h>
 
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);
-
+/* 
 int					ft_atoi(const char *str);
 int	main(void)
 {
-	
+	printf("ORIGINAL: atoi: %d\n", atoi("   + 123 "));
+	printf("CREATED: atoi: %d\n", ft_atoi("   + 123 "));
+	printf("\n");
+	printf("ORIGINAL: atoi: %d\n", atoi("   -123"));
+	printf("CREATED: atoi: %d\n", ft_atoi("   -123"));
+	printf("\n");
 	printf("ORIGINAL: atoi: %d\n", atoi("-999999999999"));
 	printf("CREATED: atoi: %d\n", ft_atoi("-999999999999"));
 	printf("\n");
@@ -17,9 +34,8 @@ int	main(void)
 	printf("\n");
 	printf("ORIGINAL: atoi: %d\n", atoi("2147483647"));
 	printf("CREATED: atoi: %d\n", ft_atoi("2147483647"));
-
 	return (0);
-}
+} */
 
 int	ft_atoi(const char *str)
 {

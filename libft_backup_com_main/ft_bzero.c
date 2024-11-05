@@ -1,30 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:43:14 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:25:32 by lethallyn        ###   ########.fr       */
+/*   Created: 2024/11/05 15:43:11 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 15:43:12 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+void	ft_bzero(void *s, size_t n);
 
-void	*ft_calloc(size_t nitems, size_t size)
+ int	main(void)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	int	size;
+	int	str[SIZE];
+	int	i;
 
 	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
+	size = 9;
+	ft_bzero(str, sizeof(str));
+	while (i < size)
 	{
-		ptr[i] = 0;
+		printf("%d ", str[i]);
 		i++;
 	}
-	return (ptr);
+	printf("\n");
+	return (0);
+} */
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+	char	*c;
+
+	c = s;
+	i = 0;
+	while (i < n)
+	{
+		c[i] = '\0';
+		i++;
+	}
 }

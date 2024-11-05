@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:43:14 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:25:32 by lethallyn        ###   ########.fr       */
+/*   Created: 2024/11/05 15:44:39 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 15:44:40 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/* 
+void	ft_putstr_fd(char *s, int fd);
 
-void	*ft_calloc(size_t nitems, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	write(fd, &c, 1);
+}
+
+int	main(void)
+{
+	char	*str = "abcd";
+
+	ft_putstr_fd(str, 1);
+	return (0);
+} */
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
 
 	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
+	while (s[i])
 	{
-		ptr[i] = 0;
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	return (ptr);
 }

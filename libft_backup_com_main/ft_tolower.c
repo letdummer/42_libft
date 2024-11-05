@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:43:14 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:25:32 by lethallyn        ###   ########.fr       */
+/*   Created: 2024/11/05 15:45:46 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 15:45:47 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/* 
+int	ft_tolower(int c);
 
-void	*ft_calloc(size_t nitems, size_t size)
+int	main(void)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	int	result;
 
-	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
+	result = ft_tolower('A');
+	printf("%c\n", result);
+	result = ft_tolower('7');
+	printf("%c\n", result);
+	result = ft_tolower('Z');
+	printf("%c\n", result);
+	result = ft_tolower('a');
+	printf("%c\n", result);
+	return (0);
+} */
+
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
 	{
-		ptr[i] = 0;
-		i++;
+		c += 32;
+		return (c);
 	}
-	return (ptr);
+	else
+		return (c);
 }

@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:43:14 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:25:32 by lethallyn        ###   ########.fr       */
+/*   Created: 2024/11/05 15:43:18 by lethallyn         #+#    #+#             */
+/*   Updated: 2024/11/05 15:43:19 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+int	ft_isalnum(int c)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	return (ft_isalpha(c) || ft_isdigit(c));
+}
 
-	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
+/* int	ft_isalpha(int c)
+{
+	return ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'));
+}
+
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+int	main(void)
+{
+	int i = 91;
+	int result;
+
+	while (i <= 96)
 	{
-		ptr[i] = 0;
+		result = ft_isalnum(i);
+		printf("%d", result);
 		i++;
 	}
-	return (ptr);
-}
+}  */
