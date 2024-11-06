@@ -1,29 +1,46 @@
-/* #include "../include/libft_tests.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_test.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/06 15:29:37 by ldummer-          #+#    #+#             */
+/*   Updated: 2024/11/06 16:33:32 by ldummer-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// Inclui o protótipo de ft_itoa e as funções auxiliares
-char	*ft_itoa(int n);
+#include "../include/libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+char	*ft_itoa_test()
 {
-	int		test_values[] = {123, -456, 0, 2147483647, -2147483648};
-	int		num_tests = sizeof(test_values) / sizeof(test_values[0]);
+	int		chars[] = {123, -456, 0, 2147483647, -2147483648};
+	int		nb_tests = sizeof(chars) / sizeof(chars[0]);
 	char	*result;
+	int		i;
+	int	ch;
 
-	printf("Testing ft_itoa with different integer values:\n");
-	for (int i = 0; i < num_tests; i++)
+	printf("\n/===================================\\");
+	printf("\n|        Running ft_itoa()          |");
+	printf("\n|             Tests                 |");
+	printf("\n\\===================================/\n");
+	i = - 1;
+	while (++i < nb_tests)
 	{
-		result = ft_itoa(test_values[i]);
+		ch = chars[i];
+		result = ft_itoa(ch);
 		if (result != NULL)
 		{
-			printf("ft_itoa(%d) = \"%s\"\n", test_values[i], result);
-			free(result); // Libera a memória alocada por ft_itoa
+			printf("[🟢] Success: ft_itoa(%d) = \"%s\"\n", ch, result);
+			free(result);
 		}
 		else
 		{
-			printf("ft_itoa(%d) returned NULL (allocation failed)\n", test_values[i]);
+			printf("[🔴] Failure: ft_itoa(%d) returned NULL (allocation failed)\n", ch);
 		}
 	}
-
+	printf("\n");
 	return (0);
 }
- */

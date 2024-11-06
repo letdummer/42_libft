@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:24:57 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:25:56 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 13:34:43 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "../include/libft.h"
 #include <stdio.h>
 
-int	*ft_calloc(void)
+#define SIZE_MAX = 100
+
+int	*ft_calloc_test(void)
 {
 	int		n;
 	int		i;
@@ -46,4 +49,4 @@ int	*ft_calloc(void)
 		free(array);
 	}
 	return (0);
-}
+} */

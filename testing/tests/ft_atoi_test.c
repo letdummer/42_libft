@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:24:36 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:26:09 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 13:30:55 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_atoi_test(void)
 {
