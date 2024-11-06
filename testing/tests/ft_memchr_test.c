@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:38 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 17:04:57 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:32:12 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	*ft_memchr_test()
 				"searching-for-something [...]", 
 				"my_internet_provider_is-WTF!"};
 	char	ch[] = {'a', '5', ' ', '-'};
-	char	*result;
 	const char	*s;
-	char	c;
-	int		i;
+	char	*result;
 	int		nb_tests;
+	int		i;
+	char	c;
 
 	printf("\n/===================================\\");
 	printf("\n|        Running ft_memchr()       |");

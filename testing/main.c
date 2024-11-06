@@ -14,7 +14,9 @@ int	main(void)
 	ft_memcmp_test();
 	ft_memcpy_test();
 	ft_memmove_test();
-
+	ft_memset_test();
+	ft_strlcpy_test();
+	ft_putchar_fd_test();
 
 	return (0);
 }

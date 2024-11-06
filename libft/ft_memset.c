@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:44:01 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:44:02 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 17:59:32 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* 
-void	*ft_memset(void *str, int c, size_t n);
-
-int	main(void)
-{
-	char	str[50] = "This is a string";
-
-	printf("Before ft_memset: %s\n", str);
-	ft_memset(str, '#', 4);
-	printf("After ft_memset(): %s\n", str);
-	return (0);
-} */
 
 void	*ft_memset(void *str, int c, size_t n)
 {

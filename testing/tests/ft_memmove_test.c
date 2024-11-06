@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:12:32 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 17:42:56 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:57:40 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,11 @@ void	*ft_memmove_test()
 			result = ft_memmove(dest_str, src_str[i], test_counts[i]);
 			reso = memmove(dest_original, src_str[i], test_counts[i]);
 			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, result, reso);
-			if ()
-			}
+			if (result == reso)
+				printf("[🟢] Success!\n\n");
+			else
+				printf("[🔴] Failure.\n\n");
+		}
 		
 		else if (i == 1)
 		{
@@ -58,45 +61,50 @@ void	*ft_memmove_test()
 			strcpy(dest_original, "Overlap here!");
 			result = ft_memmove(dest_str + 5, dest_str, test_counts[i]);
 			reso = memmove(dest_str + 5, dest_str, test_counts[i]);
-			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);		}
+			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);
+			if (result == reso)
+				printf("[🟢] Success!\n\n");
+			else
+				printf("[🔴] Failure.\n\n");	
+		}
 		else if (i == 2)
 		{
 			strcpy(dest_str, "Overlap source ahead");
 			strcpy(dest_original, "Overlap source ahead");
 			result = ft_memmove(dest_str, dest_str + 8, test_counts[i]);
 			reso = memmove(dest_str, dest_str + 8, test_counts[i]);
-			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);		}
+			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);
+			if (result == reso)
+				printf("[🟢] Success!\n\n");
+			else
+				printf("[🔴] Failure.\n\n");	
+		}
 		else if (i == 3)
 		{
 			strcpy(dest_str, "EdgeOverlap");
 			strcpy(dest_original, "EdgeOverlap");
 			result = ft_memmove(dest_str + 4, dest_str, test_counts[i]);
 			reso = memmove(dest_str + 4, dest_str, test_counts[i]);
-			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);		}
+			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);
+			if (result == reso)
+				printf("[🟢] Success!\n\n");
+			else
+				printf("[🔴] Failure.\n\n");		
+		}
 		else if (i == 4)
 		{
 			strcpy(dest_str, "Zero count should not change");
 			strcpy(dest_original, "Zero count should not change");
 			result = ft_memmove(dest_str, src_str[i], test_counts[i]);
 			reso = memmove(dest_str, src_str[i], test_counts[i]);
-			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);		
+			printf("Test %d:\n\tft_memmove dest = \"%s\"\n\tmemmove dest = \"%s\"\n", i + 1, dest_str, dest_original);
+			if (result == reso)
+				printf("[🟢] Success!\n\n");
+			else
+				printf("[🔴] Failure.\n\n");		
 		}
 		i++;
 	}
 	printf("\n");
 	return (0);
 }
-
-/*
-
-printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, ch);
-
-else
-	{
-		printf("[🔴] Failure: Input %c did not pass.\n", ch);
-		printf("Expected: %d\tResult: %d\n" 000000);
-	}
-
-
-
-*/

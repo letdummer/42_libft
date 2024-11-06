@@ -15,6 +15,11 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t count);
 void	*ft_memmove(void *dest, const void *src, size_t count);
+void	*ft_memset(void *str, int c, size_t n);
+
+void	ft_putchar_fd(char c, int fd);
+
+size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 
 #endif
