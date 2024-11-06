@@ -3,27 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:59 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 16:02:03 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 17:12:10 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* 
-void	*ft_memmove(void *dest, const void *src, size_t count);
-
-int	main(void)
-{
-	char		dest_str[] = "123456";
-	const char	src_str[] = "abcdef";
-
-	printf("Before memmove dest = %s, src = %s\n", dest_str, src_str);
-	ft_memmove(dest_str, src_str, 3);
-	printf("After memmove dest = %s, src = %s\n", dest_str, src_str);
-	return (0);
-} */
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {

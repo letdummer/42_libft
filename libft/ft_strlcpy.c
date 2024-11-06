@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:24 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:45:25 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 11:22:19 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
+		i = 0;
 	if (dstsize == 0)
 	{
-		i = 0;
 		while (src[i] != '\0')
 			i++;
 		return (i);

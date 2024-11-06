@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:45 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:43:46 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/06 15:32:35 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,6 @@
 static char			*ft_conv(int len);
 static void			long_to_char(long nb, char *string, int i);
 static size_t		ft_len(long nb);
-/* 
-char				*ft_itoa(int n);
-int	main(void)
-{
-	int		test_values[] = {123, -456, 0, 2147483647, -2147483648};
-	int		num_tests = sizeof(test_values) / sizeof(test_values[0]);
-	char	*result;
-
-	printf("Testing ft_itoa with different integer values:\n");
-	for (int i = 0; i < num_tests; i++)
-	{
-		result = ft_itoa(test_values[i]);
-		if (result != NULL)
-		{
-			printf("ft_itoa(%d) = \"%s\"\n", test_values[i], result);
-			free(result); 
-		}
-		else
-		{
-			printf("ft_itoa(%d) returned NULL\n", test_values[i]);
-		}
-	}
-} */
 
 char	*ft_itoa(int n)
 {

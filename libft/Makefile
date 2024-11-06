@@ -1,10 +1,9 @@
 # Definindo as cores ANSI
-RED    := \e[1;31m
-GREEN  := \e[1;32m	
-PURPLE := \e[0;35m
-BLUE   := \e[0;34m
-
-RESET  := \033[0m
+RED     := $(shell echo -e "\033[1;31m")
+GREEN   := $(shell echo -e "\033[1;32m")
+PURPLE  := $(shell echo -e "\033[0;35m")
+BLUE    := $(shell echo -e "\033[0;34m")
+RESET   := $(shell echo -e "\033[0m")
 
 # Funções para imprimir texto com cores
 text = @echo "$(PURPLE)$(1)$(RESET)"
@@ -17,8 +16,6 @@ NAME= libft.a
 
 SRC_DIR = $(wildcard *.c)
 OBJ_DIR = $(SRC_DIR:.c=.o)
-H_FILES = $(wildcard *.h)
-INCLUDES = -I.
 
 ################## Compilation ##################
 CC= cc
@@ -38,17 +35,8 @@ RM= rm -f
 	ft_toupper.c	ft_tolower.c
 
 
-#################### Help #####################
-help:
-	@echo "Opções disponíveis:"
-	@echo "$(PURPLE)make            - Compila o projeto e cria a biblioteca $(NAME).$(RESET)"
-	@echo "$(PURPLE)make clean      - Remove arquivos objeto (.o).$(RESET)"
-	@echo "$(PURPLE)make fclean     - Remove arquivos objeto e a biblioteca $(NAME).$(RESET)"
-	@echo "$(PURPLE)make re         - Limpa e recompila o projeto.$(RESET)"
-	@echo "$(PURPLE)make help       - Exibe esta ajuda.$(RESET)"
 
 ################################################
-.DEFAULT_GOAL := all
 
 all: $(NAME)
 
@@ -58,9 +46,9 @@ $(NAME): $(OBJ_DIR)
 	@ar rcs $(NAME) $(OBJ_DIR)
 	$(call success, "Build complete: $(NAME) ✅ ✨")
 
-%.o: %.c $(H_FILES)
+%.o: %.c 
 	$(call warn, "Compiling [...] $<")
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 ################ Clean-up Rules ################
 clean:
@@ -76,9 +64,14 @@ fclean: clean
 re: fclean all
 	$(call success, "Cleaning and re-compiling [...]")
 
+#################### Help #####################
+help:
+	@echo "Opções disponíveis:"
+	@echo "$(PURPLE)make            - Compila o projeto e cria a biblioteca $(NAME).$(RESET)"
+	@echo "$(PURPLE)make clean      - Remove arquivos objeto (.o).$(RESET)"
+	@echo "$(PURPLE)make fclean     - Remove arquivos objeto e a biblioteca $(NAME).$(RESET)"
+	@echo "$(PURPLE)make re         - Limpa e recompila o projeto.$(RESET)"
+	@echo "$(PURPLE)make help       - Exibe esta ajuda.$(RESET)"
 
--include $(wildcard .makeoptions)
-ifeq ($(MAKECMDGOALS),)
-.DEFAULT_GOAL := all
-endif
+
 .PHONY: all clean fclean re help
