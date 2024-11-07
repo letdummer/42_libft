@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:45 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/06 15:32:35 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:05:25 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			*ft_conv(int len);
-static void			long_to_char(long nb, char *string, int i);
+static char			*ft_alloc_str(int len);
+static void			ft_long_to_char(long nb, char *string, int i);
 static size_t		ft_len(long nb);
 
 char	*ft_itoa(int n)
@@ -25,16 +25,16 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	len_n = ft_len(nb);
-	string = ft_conv(len_n);
+	string = ft_alloc_str(len_n);
 	if (string == NULL)
 		return (NULL);
 	i = len_n - 1;
-	long_to_char(nb, string, i);
+	ft_long_to_char(nb, string, i);
 	string[len_n] = '\0';
 	return (string);
 }
 
-static char	*ft_conv(int len)
+static char	*ft_alloc_str(int len)
 {
 	char	*str;
 
@@ -64,7 +64,7 @@ static size_t	ft_len(long nb)
 	return (i);
 }
 
-static void	long_to_char(long nb, char *string, int i)
+static void	ft_long_to_char(long nb, char *string, int i)
 {
 	if (nb == 0)
 		string[0] = '0';

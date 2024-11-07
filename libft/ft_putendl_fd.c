@@ -6,17 +6,12 @@
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:44:07 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:58:58 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/07 19:46:50 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /* 
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putstr_fd(char *s, int fd)
 {

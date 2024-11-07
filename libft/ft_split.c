@@ -6,14 +6,14 @@
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:05 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:06:13 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/07 22:38:55 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 static size_t	ft_count(const char *str, char c);
 static char		*ft_fill_word(const char *str, int start, int end);
-static void		*ft_alloca(char **strings, int k);
+static void		*ft_free_str(char **strings, int k);
 static char		**ft_initialize_vars(const char *s, char c, char ***string,
 		int *s_word, size_t *i, size_t *j);
 /* /////////////////////////////////////////////////////////////
@@ -102,7 +102,7 @@ char	**ft_split(char const *s, char c)
 		{
 			string[j] = ft_fill_word(s, s_word, i);
 			if (!(string[j]))
-				return (ft_alloca(string, j));
+				return (ft_free_str(string, j));
 			s_word = -1;
 			j++;
 		}
@@ -132,7 +132,7 @@ static size_t	ft_count(const char *str, char c)
 	return (count);
 }
 
-static void	*ft_alloca(char **strings, int k)
+static void	*ft_free_str(char **strings, int k)
 {
 	int	i;
 

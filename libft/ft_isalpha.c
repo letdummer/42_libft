@@ -6,7 +6,7 @@
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:24 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:43:25 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/07 12:51:25 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,3 @@ int	ft_isalpha(int c)
 	return ((c >= 'a' && c <= 'z')
 		|| (c >= 'A' && c <= 'Z'));
 }
-
-/* int	main(void)
-{
-	int	c = 'a';
-	int result;
-
-	while (c <= 'z')
-	{
-	result = ft_isalpha(c);
-	printf("%d", result);
-	c++;
-	}
-	return (0);
-} */

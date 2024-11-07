@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:56 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/06 16:20:07 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:37:05 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	unsigned const char	*source;
 	unsigned char	*destin;
 
-	if (dest == (void *)0 && src == (void *)0)
+	if (dest == NULL || src == NULL)
 		return (dest);
 	source = (unsigned const char *) src;
 	destin = (unsigned char *) dest;

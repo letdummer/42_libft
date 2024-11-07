@@ -6,7 +6,7 @@
 /*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:11 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 21:21:06 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/07 12:34:22 by lethallyn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 	char	*c;
 
-	c = s;
+	c = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		c[i] = '\0';
+		c[i] = 0;
 		i++;
 	}
 }
