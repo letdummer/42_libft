@@ -19,6 +19,26 @@ void	*ft_memmove_test();
 void	*ft_memset_test();
 
 void	ft_putchar_fd_test();
+void	ft_putendl_fd_test();
+void	ft_putnbr_fd_test();
+void	ft_putstr_fd_test();
+
+char	*ft_strchr_test();
+void	ft_strdup_test();
+void	ft_striteri_test();
+char	*ft_strjoin_test();
+size_t	*ft_strlcat_test();
+size_t	ft_strlen_test();
+char	*ft_strmapi_test();
+int		ft_strncmp_test();
+void	ft_strnstr_test();
+char	*ft_strrchr_test();
+char	*ft_strtrim_test();
+char	*ft_substr_test();
+int		ft_tolower_test();
+int		ft_toupper_test();
+
+
 
 size_t		ft_strlcpy_test();
 

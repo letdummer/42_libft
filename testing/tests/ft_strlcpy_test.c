@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 18:48:02 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 19:07:00 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:50:05 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 
 size_t		ft_strlcpy_test()
 {
-	char	*source[] = {"this is a string", "another string", "this string is really bigger than the others. trust me!"};
+	char	*source[] = {
+		"this is a string",
+		"another string",
+		NULL
+	};
 	char	dest[50];
 	int		nb_tests;
-	char		result;
-	char		reso;
+	size_t		result;
 	int		i;
 	int		nb;
 	
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_strlcpy()       |");
+	printf("\n|        Running ft_strlcpy         |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 	
@@ -35,39 +38,27 @@ size_t		ft_strlcpy_test()
 	nb = 5;
 	while (i < nb_tests)
 	{
+		printf("\nTest %d\n", i);
+		if (source[i] == NULL)
+		{
+			printf("[🔴] Failure. Source is NULL\n");		
+			i++;
+			continue;
+		}
 		printf("\tTest %d\n", i);
-		reso = strlcpy(dest, source[i], nb);
-		printf("strlcpy:\nCopied '%s' into => '%s'\nLength: '%d'\n", source[i], dest, reso);
-		printf("\n");
+		
+		ft_memset(dest, 0, sizeof(dest));
 		result = ft_strlcpy(dest, source[i], nb);
-		printf("ft_strlcpy:\nCopied '%s' into => '%s'\nLength: '%d'\n", source[i], dest, result);
-		i++;
-		nb++;
-		if (reso == result)
+		printf("ft_strlcpy:\nCopied '%s' into => '%s'\nLength: '%ld'\n", source[i], dest, result);
+		
+		if (result)
 			printf("[🟢] Success!\n");
 		else
 			printf("[🔴] Failure.\n");		
 		printf("\n-----------------------------------\n");
+		i++;
+		nb++;
 	}
 	printf("\n");
 	return (0);
 } 
-
-/*
-
-
-
-
-
-
-printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, ch);
-
-else
-	{
-		printf("[🔴] Failure: Input %c did not pass.\n", ch);
-		printf("Expected: %d\tResult: %d\n" 000000);
-	}
-
-
-
-*/

@@ -3,44 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:10 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 18:14:41 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 13:47:09 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* 
-char	*ft_strdup(const char *str1);
-
-size_t	ft_strlen(const char *str);
-
-int	main(void)
-{
-	char	*string = "lol";
-	char	*newstr;
-
-	newstr = ft_strdup(string);
-	if (newstr == NULL)
-		printf("the string is NULL\n");
-	else
-		printf("The new string is: %s\n", newstr);
-	free(newstr);
-	return (0);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-} */
 
 char	*ft_strdup(const char *str1)
 {

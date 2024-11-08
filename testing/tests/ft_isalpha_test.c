@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:48:03 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 13:31:19 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:54:00 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,39 @@
 
 int	ft_isalpha_test(void)
 {	
-	int chars[] = {'a', 'A', 'z', 'Z', '0', -1, '?', '#', 128};
+	int chars[] = {'a', 'A', 'z', 'Z', '0', '?', '#', 128};
 	int res;
 	int i;
 	int	nb_tests;
 	int	ch;
+	int	expected;
 	
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_isalpha()       |");
+	printf("\n|        Running ft_isalpha         |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 
 	nb_tests = sizeof(chars) / sizeof(chars[0]);
-	i = -1;
-	while (++i <= nb_tests)
+	i = 0;
+	while (i < nb_tests)
 	{
+		printf("\nTest %d\n", i);
 		ch = chars[i];
+		expected = (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
 		res = ft_isalpha(ch);
-		if (res > 0)
+		if (res != 0)
+		{
 			res = 1;
-		if (res == ft_isalpha(ch))
-			printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, ch);
+		}
+		if (res == expected)
+			printf("[🟢] Success: Input %c validated.\n", ch);
 		else
 		{
 			printf("[🔴] Failure: Input %c did not pass. ASCII: %d\n", ch, ch);
-			printf("Expected: %d\tResult: %d\n", res, ft_isalpha(ch));
-		}	
+			printf("Expected: %d\tResult: %d\n", expected, res);
+		}
+		
+		i++;
 	}
 	printf("\n");
 	return (0);

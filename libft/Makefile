@@ -62,7 +62,7 @@ fclean: clean
 	$(call success, "Library file cleaned. ✨")
 
 re: fclean all
-	$(call success, "Cleaning and re-compiling [...]")
+	$(call success, "All files have been recompiled ✅")
 
 #################### Help #####################
 help:

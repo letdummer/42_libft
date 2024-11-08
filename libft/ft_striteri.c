@@ -3,40 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:12 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:45:13 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 14:36:05 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* 
-static void	ft_transform(unsigned int i, char *c);
-void		ft_striteri(char *s, void (*f)(unsigned int, char*));
-int	main(void)
-{
-	char	strings[][20] = {
-		"",
-		"A",
-		"Hello World",
-	};
-
-	size_t		i;
-
-	i = 0;
-	size_t num_strings = sizeof(strings) / sizeof(strings[0]); 
-    while (i < num_strings)
-	{
-		printf("ORIGINAL_________ |%s|\n", strings[i]);
-		ft_striteri(strings[i], ft_transform);
-		printf("\n");
-		printf("TRANSFORMED______ |%s|\n\n", strings[i]);
-		i++;
-	}
-	return (0);
-} */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -49,9 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/* static void	ft_transform(unsigned int i, char *c)
-{
-	if (i % 2 == 0)
-		*c = '#';
-} */

@@ -30,11 +30,11 @@ void	*ft_memcpy_test()
 	char	*resc;
 	
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_memcpy()       |");
+	printf("\n|        Running ft_memcpy          |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 
-	printf("\nTEST1: USING memcpy\n");
+	printf("\nTest 1: USING memcpy\n");
 	printf("Sending:\n\toriginalres =  ");
 	print_array(originalres, sizeof(int), n1 / sizeof(int));
 	
@@ -43,7 +43,7 @@ void	*ft_memcpy_test()
 	print_array(originalres, sizeof(int), n1 / sizeof(int));
 
 	
-	printf("\nTEST1: USING ft_memcpy\n");
+	printf("\nTest 1: USING ft_memcpy\n");
 	memset(originalres, 0, n1);
 	printf("Sending:\n\toriginalres =  ");
 	print_array(originalres, sizeof(int), n1 / sizeof(int));
@@ -57,7 +57,7 @@ void	*ft_memcpy_test()
 	else
 		printf("[🔴] Failure.\n");
 
-	printf("\nTEST2: USING memcpy\n");
+	printf("\nTest 2: USING memcpy\n");
 	printf("Sending:\n\tcreatedres =  ");
 	print_array(createdres, sizeof(char), n2);
 	
@@ -65,7 +65,7 @@ void	*ft_memcpy_test()
 	printf("Result:\n\tcreatedres =  ");
 	print_array(createdres, sizeof(char), n2);
 	
-	printf("\nTEST2: USING ft_memcpy\n");
+	printf("\nTest 2: USING ft_memcpy\n");
 	memset(createdres, 0, n2); 
 	printf("Sending:\n\tcreatedres =  ");
 	print_array(createdres, sizeof(char), n2);

@@ -7,7 +7,7 @@ void	*ft_memset_test()
 	char	*strings[] = {
 		"This is a string",
 		"Searching for something",
-		"0123456789"
+		"0123456789",
 		""
 		};
 	int		ch[] = {'#', '*', '@', '0'};
@@ -20,7 +20,7 @@ void	*ft_memset_test()
 	char	str[50];
 
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_memset()        |");
+	printf("\n|        Running ft_memset          |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 

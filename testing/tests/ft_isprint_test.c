@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:15:34 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 16:29:44 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:53:50 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int ft_isprint_test(void)
 	int	res;
 	
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_isprint()       |");
+	printf("\n|        Running ft_isprint         |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 	
@@ -30,12 +30,13 @@ int ft_isprint_test(void)
 	i = - 1;
 	while (++i <= nb_tests)
 	{
+		printf("\nTest %d\n", i);
 		ch = chars[i];
 		res = ft_isprint(ch);
 		if (res > 0)
 			res = 1;
 		if (res == ft_isprint(ch))
-			printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, ch);
+			printf("[🟢] Success: Input %c validated.\n", ch);
 
 		else
 		{

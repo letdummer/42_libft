@@ -1,29 +1,47 @@
-/*
 #include "../include/libft.h"
+#include <stdio.h>
 #include <ctype.h>
 
-int	ft_toupper(void)
+int	ft_toupper_test()
 {
-	int	chars[] = {'a', '7', 'z', 'A'};
-	int	num_tests;
-	int	i;
-	int	c;
-	int	original;
+	size_t	strings[] = {
+			'a',
+			'z',
+			'B',
+			'3'
+		};
+	char		result;
+	char		reso;
+	int		nb_tests;
+	int		i;
+
+	printf("\n/===================================\\");
+	printf("\n|        Running ft_toupper         |");
+	printf("\n|             Tests                 |");
+	printf("\n\\===================================/\n");
+
+	nb_tests = sizeof(strings) / sizeof(strings[0]);
 
 	i = 0;
-	num_tests = sizeof(chars) / sizeof(chars[0]);
-	i = -1;
-	while (++i < num_tests)
+	while (i < nb_tests)
 	{
-		c = chars[i];
-		original = toupper(c);
-		if (original > 0)
-			original = 1;
-		if (original == ft_toupper(c))
-			printf("test passed for input '%c'\n", c);
-		else
-			printf("Test failed for input '%c\n", c);
-	}
+		printf("\nTest %d\n", i);
 
+		reso = toupper(strings[i]);
+		result = ft_toupper(strings[i]);
+		if (!strings[i])
+		{
+			printf("[🔴] Failure: Returned NULL (allocation failed)\n");
+			//return (NULL);
+		}
+		if (result == reso)
+		{
+			printf("[🟢] Success: the result matches with the original function. |%c|\n", result);
+		}
+		else
+			printf("[🔴] Failure. \n");
+		i++;
+	}
+	printf("\n");
 	return (0);
-} */
+}

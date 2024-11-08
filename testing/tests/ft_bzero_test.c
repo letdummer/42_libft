@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:21:18 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/06 13:31:09 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:54:17 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	bzero_test(void)
 	ft_bzero(str, sizeof(str));
 	while (i < size)
 	{
+		printf("\nTest %d\n", i);
 		printf("%d ", str[i]);
 		i++;
 	}

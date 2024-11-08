@@ -3,30 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:35 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 15:45:36 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 15:32:48 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* 
-char	*ft_strnstr(const char *big,	const char *little, size_t len);
-
-int	main(void)
-{
-	const char	*largestring = "Foo Bar Baz";
-	const char	*smallstring = "Bar";
-	char		*ptr;
-
-	ptr = ft_strnstr(largestring, smallstring, 7);
-	if (ptr != NULL)
-		printf("%.*s\n", (int)strlen(smallstring), ptr);
-	else
-		printf("Substring not found within the limit.\n");
-	return (0);
-} */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:29:37 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 16:33:32 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:53:45 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ char	*ft_itoa_test()
 	int	ch;
 
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_itoa()          |");
+	printf("\n|        Running ft_itoa            |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 	i = - 1;
 	while (++i < nb_tests)
 	{
+		printf("\nTest %d\n", i);
 		ch = chars[i];
 		result = ft_itoa(ch);
 		if (result != NULL)

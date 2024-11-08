@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:41 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 17:20:05 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 15:47:34 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,63 +14,6 @@
 
 static int	ft_to_ignore(const char *s, char c);
 static char	*ft_new_string(const char *s1, size_t start, size_t len);
-
-/* /////////////////////////////////////////////////
-char		*ft_strtrim(char const *s1, char const *set);
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-int	main(void)
-{
-	char *result;
-
-	printf("\n*************************\n");
-	printf("*\tTesting\t\t*");
-	printf("\n*************************\n");
-
-	result = ft_strtrim("", "");
-	printf("Trim empty string: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim("   ", " ");
-	printf("Trim only spaces: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim("Hello", " ");
-	printf("Trim no spaces: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim("   Hello World   ", " ");
-	printf("Trim with spaces: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim("--Hello--World--", "-");
-	printf("Trim with dashes: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim(".teste, bla ,.,.", ",.");
-	printf("Trim with dashes: |%s|\n", result);
-	free(result);
-	
-	result = ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " ");
-	printf("Trim: |%s|\n", result);
-	free(result);
-
-	result = ft_strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ", " \n\t");
-	printf("Trim with dashes: |%s|\n", result);
-	free(result);
-
-	return (0);
-} ///////////////////////////////////////////////// */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

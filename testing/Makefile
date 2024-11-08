@@ -64,8 +64,7 @@ fclean: clean
 	$(call success, "Library file cleaned. ✨")
 
 re: fclean
-	$(call warn, "Cleaning and recompiling [...]")
 	@$(MAKE) --no-print-directory fclean all
-	$(call text, "All files have been recompiled ✅")
+	$(call success, "All files have been recompiled ✅")
 
 .PHONY: all clean fclean re

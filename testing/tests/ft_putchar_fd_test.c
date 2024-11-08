@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:03:16 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/07 12:03:17 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 20:51:22 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "../include/libft.h"
 #include <stdio.h>
 
@@ -17,14 +18,13 @@
 void	ft_putchar_fd_test()
 {
 	char	chars[] = {'a', 'A', 'z', 'Z', '0', '?', '*', '#'};
-	int		i;
 	int		nb_tests;
-	char	ch;
 	char	*result;
-
+	int		i;
+	char	ch;
 	
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_isalpha()       |");
+	printf("\n|        Running ft_isalpha         |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 	nb_tests = sizeof(chars) / sizeof(chars[0]);
@@ -32,6 +32,7 @@ void	ft_putchar_fd_test()
 	i = 0;
 	while (i < nb_tests)
 	{
+		printf("\nTest %d\n", i);
 		ch = chars[i];
 		result = ft_putchar_fd(ch, 1);
 
@@ -47,5 +48,5 @@ void	ft_putchar_fd_test()
 	}	
 		
 	printf("\n");
-	return (0);
 }
+ */

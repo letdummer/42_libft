@@ -3,29 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:20 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/05 16:01:06 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/08 21:16:40 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* 
-char	*ft_strjoin(char const *s1, char const *s2);
-
-size_t	ft_strlen(const char *str);
-
-int	main(void)
-{
-	char	*string1 = "this is";
-	char	*string2 = " a string";
-	char	*result;
-
-	result = ft_strjoin(string1, string2);
-	printf("%s\n", result);
-	return (0);
-} */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -33,9 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t		i;
 	size_t		j;
 
-	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (str == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	i = 0;
 	j = 0;
 	while (i < ft_strlen(s1))

@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:38 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/06 18:32:12 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:53:40 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ void	*ft_memchr_test()
 	const char	*strings[] = {"This is a string!", 
 				"012345689", 
 				"searching-for-something [...]", 
-				"my_internet_provider_is-WTF!"};
-	char	ch[] = {'a', '5', ' ', '-'};
+				"my_internet_provider_is-WTF!",
+				""
+				};
+	char	ch[] = {'a', '5', ' ', '-', '-'};
 	const char	*s;
 	char	*result;
 	int		nb_tests;
@@ -28,7 +30,7 @@ void	*ft_memchr_test()
 	char	c;
 
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_memchr()       |");
+	printf("\n|        Running ft_memchr          |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 	
@@ -37,19 +39,19 @@ void	*ft_memchr_test()
 	i = 0;
 	while (i < nb_tests)
 	{
+		printf("\nTest %d\n", i);
 		s = strings[i];
 		c = ch[i];
 		result = ft_memchr(s, c, 25);
-		if (result == NULL)
+		printf("\tString: %s\n\n", s);
+		if (!result)
 		{				
-			printf("[🔴] Failure: the character |%c| cound't be find "
-				"until the |%d| position of the string.\n", c, 10);
-			printf("\t\nString: %s\n\n", strings[i]);
+			printf("[🔴] Failure: the character |%c| couldn't be found "
+				"within the first |%d| characters of the string.\n", c, 10);
 		}
 		else
 		{
 			printf("[🟢] Success: the string after |%c| is |%s|\n", c, result);
-			printf("\t\nString: %s\n\n", strings[i]);
 		}
 		i++;
 	}
