@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:10 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 13:47:09 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/09 14:59:24 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,3 @@ char	*ft_strdup(const char *str1)
 	new_string[i] = '\0';
 	return (new_string);
 }
-
-
-

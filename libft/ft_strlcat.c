@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:22 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 17:35:08 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:02:31 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (size <= dest_len)
-		return (size +src_len);
-		
+		return (size + src_len);
 	result = src_len + dest_len;
-	
 	i = 0;
 	while (src[i] && (dest_len + 1) < size)
 	{

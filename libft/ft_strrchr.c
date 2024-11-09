@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:38 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 21:07:01 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:00:30 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *str, int c)
 		while (*str)
 			str++;
 		return ((char *)str);
-	}	
+	}
 	while (*str)
 	{
 		if (*str == ch)

@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:44:09 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 12:37:26 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:02:17 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n == INT_MIN)
 	{
-		write(fd, "-2147483648", 11);
-		return;
+		write (fd, "-2147483648", 11);
+		return ;
 	}
 	if (n < 0)
 	{
@@ -37,4 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nbr / 10, fd);
 	ft_putchar_fd((char)(nbr % 10 + '0'), fd);
 }
-

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:05 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/07 22:38:55 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/09 15:01:13 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static size_t	ft_count(const char *str, char c);
 static char		*ft_fill_word(const char *str, int start, int end);
 static void		*ft_free_str(char **strings, int k);

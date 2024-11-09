@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:44:01 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/07 18:47:33 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/09 14:58:05 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *str, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*string;
 
 	i = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lethallyn <lethallyn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:59 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/07 18:36:30 by lethallyn        ###   ########.fr       */
+/*   Updated: 2024/11/09 15:00:41 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		i = n;
 		while (--i < n)
-		{
 			destin[i] = source[i];
-		}
 	}
 	else
 	{
