@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:45:05 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/09 15:01:13 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:08:56 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ static size_t	ft_count(const char *str, char c);
 static char		*ft_fill_word(const char *str, int start, int end);
 static void		*ft_free_str(char **strings, int k);
 static char		**ft_initialize_vars(const char *s, char c, char ***string,
-		int *s_word, size_t *i, size_t *j);
+					int *s_word);
 /* /////////////////////////////////////////////////////////////
- void			*ft_calloc(size_t nitems, size_t size);
-size_t			ft_strlen(const char *str);
+#include "ft_calloc.c"
+#include "ft_strlen.c"
+//void			*ft_calloc(size_t nitems, size_t size);
+//size_t			ft_strlen(const char *str);
 char			**ft_split(char const *s, char c);
 int	main(void)
 {
@@ -77,14 +79,12 @@ size_t	ft_strlen(const char *str)
 } /////////////////////////////////////////////////////	 */	
 
 static char	**ft_initialize_vars(const char *s, char c, char ***string,
-	int *s_word, size_t *i, size_t *j)
+	int *s_word)
 {
-	*i = 0;
-	*j = 0;
 	*s_word = -1;
 	*string = ft_calloc((ft_count(s, c) + 1), sizeof(char *));
 	return (*string);
-}	
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -93,9 +93,11 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	j;
 
-	if (!ft_initialize_vars(s, c, &string, &s_word, &i, &j))
+	i = 0;
+	j = 0;
+	if (!ft_initialize_vars(s, c, &string, &s_word))
 		return (NULL);
-	while (i < (ft_strlen(s) +1 ))
+	while (i < (ft_strlen(s) + 1))
 	{
 		if (s[i] != c && s_word < 0)
 			s_word = i;
@@ -115,7 +117,7 @@ char	**ft_split(char const *s, char c)
 static size_t	ft_count(const char *str, char c)
 {
 	size_t	count;
-	int	in_word;
+	int		in_word;
 
 	count = 0;
 	in_word = 0;
