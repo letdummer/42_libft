@@ -1,9 +1,9 @@
 # Definindo as cores ANSI
-RED     := $(shell echo -e "\033[1;31m")
-GREEN   := $(shell echo -e "\033[1;32m")
-PURPLE  := $(shell echo -e "\033[0;35m")
-BLUE    := $(shell echo -e "\033[0;34m")
-RESET   := $(shell echo -e "\033[0m")
+RED     := $(shell echo "\033[1;31m")
+GREEN   := $(shell echo "\033[1;32m")
+PURPLE  := $(shell echo "\033[0;35m")
+BLUE    := $(shell echo "\033[0;34m")
+RESET   := $(shell echo "\033[0m")
 
 # Funções para imprimir texto com cores
 text = @echo "$(PURPLE)$(1)$(RESET)"
@@ -14,7 +14,7 @@ success = @echo "$(GREEN)$(1)$(RESET)"
 #################### Files #####################
 NAME= libft.a
 
-SRC_DIR = $(wildcard *.c)
+#SRC_DIR = $(wildcard *.c)
 OBJ_DIR = $(SRC_DIR:.c=.o)
 
 ################## Compilation ##################
@@ -24,7 +24,7 @@ CFLAGS= -Wall -Wextra -Werror
 ################### Commands ###################
 RM= rm -f
 
-#SRC= ft_atoi.c 		ft_bzero.c		ft_calloc.c		ft_isalnum.c \
+SRC_DIR= ft_atoi.c 		ft_bzero.c		ft_calloc.c		ft_isalnum.c \
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c \
 	ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c \
 	ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c \
