@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:45:05 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/09 15:08:56 by ldummer-         ###   ########.fr       */
+/*   Created: 2024/11/12 16:08:17 by ldummer-          #+#    #+#             */
+/*   Updated: 2024/11/12 19:11:11 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,72 +16,12 @@ static size_t	ft_count(const char *str, char c);
 static char		*ft_fill_word(const char *str, int start, int end);
 static void		*ft_free_str(char **strings, int k);
 static char		**ft_initialize_vars(const char *s, char c, char ***string,
-					int *s_word);
-/* /////////////////////////////////////////////////////////////
-#include "ft_calloc.c"
-#include "ft_strlen.c"
-//void			*ft_calloc(size_t nitems, size_t size);
-//size_t			ft_strlen(const char *str);
-char			**ft_split(char const *s, char c);
-int	main(void)
-{
-	char 	string[30] = "  ol ol";
-	char	ch = ' ';
-    char	**result;
-	int		i = 0;
- 	
-	printf("---------------------------\n");
-	printf("\tCREATED FUNCTION:\n");
-	result = ft_split(string, ch);
-	if (result)
-	{
-		while (result[i] != NULL)
-		{
-			printf(" %s\n", result[i]);
-			free (result[i]);
-			i++;
-		}
-		free (result);
-	}
-	else
-		printf("Failed to split the string.\n");
-	printf("---------------------------\n\n");
-	return (0);
-} 
-
-void	*ft_calloc(size_t nitems, size_t size)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
-	{
-		ptr[i] = 0;
-		i++;
-	}
-	return (ptr);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-} /////////////////////////////////////////////////////	 */	
+					int *start_word);
 
 static char	**ft_initialize_vars(const char *s, char c, char ***string,
-	int *s_word)
+	int *start_word)
 {
-	*s_word = -1;
+	*start_word = -1;
 	*string = ft_calloc((ft_count(s, c) + 1), sizeof(char *));
 	return (*string);
 }
@@ -89,24 +29,24 @@ static char	**ft_initialize_vars(const char *s, char c, char ***string,
 char	**ft_split(char const *s, char c)
 {
 	char	**string;
-	int		s_word;
+	int		start_word;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (!ft_initialize_vars(s, c, &string, &s_word))
+	if (!ft_initialize_vars(s, c, &string, &start_word))
 		return (NULL);
 	while (i < (ft_strlen(s) + 1))
 	{
-		if (s[i] != c && s_word < 0)
-			s_word = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && s_word >= 0)
+		if (s[i] != c && start_word < 0)
+			start_word = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && start_word >= 0)
 		{
-			string[j] = ft_fill_word(s, s_word, i);
+			string[j] = ft_fill_word(s, start_word, i);
 			if (!(string[j]))
 				return (ft_free_str(string, j));
-			s_word = -1;
+			start_word = -1;
 			j++;
 		}
 		i++;

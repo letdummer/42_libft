@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:43:56 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/09 14:56:35 by ldummer-         ###   ########.fr       */
+/*   Created: 2024/11/12 16:07:47 by ldummer-          #+#    #+#             */
+/*   Updated: 2024/11/12 16:07:48 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {

@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:45:22 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/09 15:02:31 by ldummer-         ###   ########.fr       */
+/*   Created: 2024/11/12 16:08:36 by ldummer-          #+#    #+#             */
+/*   Updated: 2024/11/12 16:08:37 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
