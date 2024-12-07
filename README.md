@@ -4,7 +4,7 @@
 
 <summary> 
   
-  ### Libft functions
+  ### 📖 Libft functions
 </summary>
 
 - [Makefile](https://github.com/letdummer/42_libft/blob/main/libft/Makefile)
