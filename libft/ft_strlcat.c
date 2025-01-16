@@ -6,12 +6,13 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:36 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:37 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:26:11 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Concatenates strings src and dest up to size bytes.
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;

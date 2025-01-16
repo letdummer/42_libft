@@ -6,12 +6,15 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:50 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:51 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:30:00 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Creates a new string resulting from the application of a function
+// to each character of the string passed as argument.
+// Returns the new string.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;

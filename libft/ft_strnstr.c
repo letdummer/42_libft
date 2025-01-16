@@ -6,12 +6,16 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:58 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:59 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:32:43 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Searches for the FIRST occurrence of the substring little in the string big,
+// where not more than len characters are searched.
+// Returns a pointer to the first character of the first occurrence 
+// of the substring, or NULL if the substring is not found.
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

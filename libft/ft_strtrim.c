@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:07 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:09:08 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:12:12 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 static int	ft_to_ignore(const char *s, char c);
 static char	*ft_new_string(const char *s1, size_t start, size_t len);
 
+// Removes all characters in the set from the beginning and end of the string.
+// Returns a new string.
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;

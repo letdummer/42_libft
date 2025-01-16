@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:06:44 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:06:45 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:45:54 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 static const char	*ft_is_space(const char *str);
 static const char	*ft_is_signal(const char *str, int *signal);
 
+// The atoi() function converts the initial portion of the string pointed 
+// to by str to int representation.
+// It returns the converted int value.
 int	ft_atoi(const char *str)
 {
 	int	result;
@@ -32,6 +35,8 @@ int	ft_atoi(const char *str)
 	return (result * signal);
 }
 
+// The ft_is_space() function is an auxiliary function that skips all the
+// spaces, tabs, newlines, form feeds, carriage returns, and vertical tabs
 static const char	*ft_is_space(const char *str)
 {
 	while (*str == ' ' || *str == '\n' || *str == '\t'
@@ -42,6 +47,8 @@ static const char	*ft_is_space(const char *str)
 	return (str);
 }
 
+// The ft_is_signal() function is an auxiliary function that checks if the
+// number is negative or positive
 static const char	*ft_is_signal(const char *str, int *signal)
 {
 	if (*str == '-')

@@ -6,12 +6,13 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:07:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:07:26 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:14:23 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// This function checks for a digit.
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');

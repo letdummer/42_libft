@@ -6,12 +6,16 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:54 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:55 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:31:11 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Compares the first n bytes of the string s1 and s2.
+// Returns an integer indicating the difference between 
+// the first different pair of bytes.
+// Or zero if the strings are identical.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

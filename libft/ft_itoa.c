@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:07:33 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 16:07:34 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:16:41 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static char			*ft_alloc_str(int len);
 static void			ft_long_to_char(long nb, char *string, int i);
 static size_t		ft_len(long nb);
 
+// This function converts an integer to a string.
 char	*ft_itoa(int n)
 {
 	char	*string;
@@ -34,6 +35,7 @@ char	*ft_itoa(int n)
 	return (string);
 }
 
+// This is an auxiliary function that allocates memory
 static char	*ft_alloc_str(int len)
 {
 	char	*str;
@@ -44,6 +46,7 @@ static char	*ft_alloc_str(int len)
 	return (str);
 }
 
+// This is an auxiliary function that calculates the length of the number
 static size_t	ft_len(long nb)
 {
 	int	i;
@@ -64,6 +67,7 @@ static size_t	ft_len(long nb)
 	return (i);
 }
 
+// This is an auxiliary function that converts a long number to a string
 static void	ft_long_to_char(long nb, char *string, int i)
 {
 	if (nb == 0)

@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:17 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/12 19:11:11 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:22:51 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ static char	**ft_initialize_vars(const char *s, char c, char ***string,
 	return (*string);
 }
 
+// Allocates and returns an array of strings 
+// obtained by splitting ’s’ using the character ’c’ as a delimiter. 
+// The array must be ended by a NULL pointer.
 char	**ft_split(char const *s, char c)
 {
 	char	**string;
@@ -89,6 +92,7 @@ static void	*ft_free_str(char **strings, int k)
 	return (NULL);
 }
 
+// Allocates (with malloc(3)) and returns a copy of ’s1’
 static char	*ft_fill_word(const char *str, int start, int end)
 {
 	char	*word;
