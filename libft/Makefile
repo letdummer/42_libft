@@ -83,6 +83,7 @@ $(NAME): $(OBJ_DIR)
 clean:
 	$(call text, "Removing object files [...]")
 	@$(RM) $(OBJ_DIR)
+	@$(RM) -rf $(TEMP_PATH)
 	$(call success, "Object files cleaned. 💣"); \
 
 fclean: clean
