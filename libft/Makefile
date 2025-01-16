@@ -17,6 +17,7 @@ NAME= libft.a
 
 #SRC_DIR = $(wildcard *.c)
 OBJ_DIR = $(SRC_DIR:.c=.o)
+OBJ_BONUS = $(BONUS_DIR:.c=.o)
 
 SRC_DIR= ft_atoi.c 		ft_bzero.c		ft_calloc.c		ft_isalnum.c \
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c \
@@ -28,6 +29,8 @@ SRC_DIR= ft_atoi.c 		ft_bzero.c		ft_calloc.c		ft_isalnum.c \
 	ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c \
 	ft_toupper.c	ft_tolower.c
 
+BONUS_DIR= ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
+	ft_lstiter.c	ft_lstlast.c	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c
 #------------------------------------------------------------------------------#
 #								COMPILATION 		  						   #
 #------------------------------------------------------------------------------#
@@ -76,13 +79,17 @@ $(NAME): $(OBJ_DIR)
 	$(call warn, "Compiling [...] $<")
 	@$(CC) $(CFLAGS) -c $< -o $@
 
+#BONUS -> need to check
+bonus: $(OBJ_DIR) $(OBJ_BONUS)
+	@ar rc $(NAME) $(OBJ_DIR) $(OBJ_BONUS)
+
 #------------------------------------------------------------------------------#
 #								CLEAN-UP RULES 		  						   #
 #------------------------------------------------------------------------------#
 #	clean the .o objects
 clean:
 	$(call text, "Removing object files [...]")
-	@$(RM) $(OBJ_DIR)
+	@$(RM) $(OBJ_DIR) $(OBJ_BONUS)
 	@$(RM) -rf $(TEMP_PATH)
 	$(call success, "Object files cleaned. 💣"); \
 
