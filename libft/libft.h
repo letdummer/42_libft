@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/01/16 16:11:38 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/02/27 21:54:11 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
