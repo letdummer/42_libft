@@ -28,7 +28,7 @@ SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
 	ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c		\
 	ft_toupper.c	ft_tolower.c	ft_calloc.c		ft_isalnum.c)
 
-BONUS= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
+BONUS_DIR= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
 		ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
 		ft_lstiter.c	ft_lstlast.c	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c)
 
@@ -62,11 +62,11 @@ MKDIR_P		= mkdir -p
 #------------------------------------------------------------------------------#
 #				TEMPORARY FILE TO CHECK NORMINETTE   						   #
 #------------------------------------------------------------------------------#
-TEMP_PATH	= .temp
+TEMP_DIR	= .temp
 
-$(TEMP_PATH):
-	mkdir -p $(TEMP_PATH)
-	@echo "* $(YELLOW)Creating $(TEMP_PATH) folder:$(RESET) $(_SUCCESS)"
+$(TEMP_DIR):
+	mkdir -p $(TEMP_DIR)
+	@echo "* $(YELLOW)Creating $(TEMP_DIR) folder:$(RESET) $(_SUCCESS)"
 
 ### Message Vars
 _SUCCESS 		= [$(GREEN_BOLD)SUCCESS$(RESET)]
@@ -90,15 +90,15 @@ $(BUILD_DIR):
 	@echo "* $(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
 
 $(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
-	@echo "$(GREEN_BOLD)█$(RESET)"
+	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(PRINTF_DIR)/%.c
-	@echo "$(GREEN_BOLD)█$(RESET)"
+	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(GNL_DIR)/%.c
-	@echo "$(GREEN_BOLD)█$(RESET)"
+	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
@@ -110,13 +110,13 @@ $(NAME): $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
 
 bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "* $(YELLOW)Archiving $(_NAME) w/ bonus$(RESET)"
-	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
 
 extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "* $(YELLOW)Archiving $(_NAME) w/ extras$(RESET)"
-	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(NAME) archived w/ extras: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
 
 
 
@@ -145,19 +145,19 @@ re: fclean all
 #________ NORMINETTE ___________________________________________#
 # Run norminette on all files
 
-norm: $(TEMP_PATH)
-	@printf "${_NORM}: $(BLUE)$(LIBFT_DIR)$(RESET)\n"
-	@ls $(LIBFT_DIR) | wc -l > $(TEMP_PATH)/norm_ls.txt
-	@printf "$(_NORM_INFO) $$(cat $(TEMP_PATH)/norm_ls.txt)\n"
+norm: $(TEMP_DIR)
+	@printf "${_NORM}: $(BLUE)$(SRC_DIR)$(RESET)\n"
+	@ls $(SRC_DIR) | wc -l > $(TEMP_DIR)/norm_ls.txt
+	@printf "$(_NORM_INFO) $$(cat $(TEMP_DIR)/norm_ls.txt)\n"
 	@printf "$(_NORM_SUCCESS) "
-	@norminette $(LIBFT_DIR) > $(TEMP_PATH)/norm_output.txt; \
-	count_ok=$$(grep -c "OK" $(TEMP_PATH)/norm_output.txt); \
-	count_total=$$(cat $(TEMP_PATH)/norm_ls.txt); \
-	count_ko=$$(grep -c "KO" $(TEMP_PATH)/norm_output.txt); \
+	@norminette $(SRC_DIR) > $(TEMP_DIR)/norm_output.txt; \
+	count_ok=$$(grep -c "OK" $(TEMP_DIR)/norm_output.txt); \
+	count_total=$$(cat $(TEMP_DIR)/norm_ls.txt); \
+	count_ko=$$(grep -c "KO" $(TEMP_DIR)/norm_output.txt); \
 	if [ $$count_ok -eq $$count_total ]; then \
 		printf "$(GREEN_BOLD)[SUCCESS] All files passed Norminette! ✅$(RESET)\n"; \
 	else \
-		cat $(TEMP_PATH)/norm_output.txt | grep -v "OK" | sed 's/.*/$(RED_BOLD)&$(RESET)/'; \
+		cat $(TEMP_DIR)/norm_output.txt | grep -v "OK" | sed 's/.*/$(RED_BOLD)&$(RESET)/'; \
 	fi;
 	@echo "$(CYAN_BOLD)$(_SEP)$(RESET)"
 
@@ -167,11 +167,11 @@ norm: $(TEMP_PATH)
 #------------------------------------------------------------------------------#
 help:
 	@echo "Available options:"
-	@echo "$(PURPLE)make			- Compiles the project and creates the library $(NAME).$(RESET)"
-	@echo "$(PURPLE)make clean	  - Removes object files (.o).$(RESET)"
-	@echo "$(PURPLE)make fclean	 - Removes object files and the library $(NAME).$(RESET)"
-	@echo "$(PURPLE)make re		 - Cleans and recompiles the project.$(RESET)"
-	@echo "$(PURPLE)make help	   - Displays this help message.$(RESET)"
+	@echo "$(PURPLE)make            - Compiles the project and creates the library $(NAME).$(RESET)"
+	@echo "$(PURPLE)make clean      - Removes object files (.o).$(RESET)"
+	@echo "$(PURPLE)make fclean     - Removes object files and the library $(NAME).$(RESET)"
+	@echo "$(PURPLE)make re         - Cleans and recompiles the project.$(RESET)"
+	@echo "$(PURPLE)make help       - Displays this help message.$(RESET)"
 
 
 #------------------------------------------------------------------------------#
