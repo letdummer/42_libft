@@ -32,7 +32,8 @@ BONUS= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
 		ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
 		ft_lstiter.c	ft_lstlast.c	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c)
 
-EXTRA = $(addprefix $(LIBFT_DIR)/, )
+EXTRA = $(addprefix $(LIBFT_DIR)/, ft_putchar_fd	ft_putnbr ft_numlen.c \
+		ft_strcpy.c	ft_strcmp.c	)
 
 PRINTF_DIR	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_DIR)/, ft_printf.c ft_printf_utils.c)
