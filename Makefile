@@ -109,14 +109,14 @@ $(NAME): $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
 
 
 bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
-	@echo "* $(YELLOW)Archiving $(_NAME) w/ bonus$(RESET)"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
+	@echo "$(YELLOW)Archiving $(_NAME) w/ bonus$(RESET)"
+	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+	@echo "$(NAME) archived w/ bonus: $(SUCCESS)$(RESET)"
 
 extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(YELLOW)Archiving $(_NAME) w/ extras$(RESET)"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
+	@echo "$(YELLOW)Archiving $(NAME) w/ extras$(RESET)"
+	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	@echo "$(NAME) archived w/ extras: $(SUCCESS)$(RESET)"
 
 
 

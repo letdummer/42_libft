@@ -92,15 +92,15 @@ $(BUILD_DIR):
 
 $(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
 	@echo "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(PRINTF_DIR)/%.c
 	@echo "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(GNL_DIR)/%.c
 	@echo "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
 	$(call success, "All files have been compiled ✅")
@@ -115,9 +115,9 @@ bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
 
 extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(YELLOW)Archiving $(_NAME) w/ extras$(RESET)"
+	@echo "$(YELLOW)Archiving $(_NAME) w/ extras$(RESET)"
 	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(NAME) archived w/ extras: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
+	@echo "$(NAME) archived w/ extras: $(_SUCCESS) $(YELLOW)🖔$(RESET)"
 
 
 
