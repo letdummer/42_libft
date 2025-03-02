@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/03/02 11:12:06 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/03/02 11:53:12 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ $(BUILD_DIR):
 	$(MKDIR_P) $(BUILD_DIR)
 	@echo "$(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
 
-$(BUILD_DIR)/%.o: $(BUILD_DIR)/%.c
+$(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
