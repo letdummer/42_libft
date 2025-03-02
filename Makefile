@@ -18,7 +18,7 @@ NAME= libft.a
 
 BUILD_DIR	= .build
 TEMP_DIR	= .temp
-LIBFT_DIR	= ./
+LIBFT_DIR	= .
 
 SRC =	ft_atoi.c 		ft_bzero.c		\
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
