@@ -18,9 +18,9 @@ NAME= libft.a
 
 BUILD_DIR	= .build
 TEMP_DIR	= .temp
-LIBFT_DIR	= .
+LIBFT_DIR	= ./libft
 
-SRC =	ft_atoi.c 		ft_bzero.c		\
+SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
 	ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c		\
 	ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
@@ -89,9 +89,9 @@ all: $(NAME)
 
 $(BUILD_DIR):
 	$(MKDIR_P) $(BUILD_DIR)
-	@echo "* $(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
+	@echo "$(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
 
-$(BUILD_DIR)/%.o: %.c
+$(BUILD_DIR)/%.o: $(BUILD_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -103,7 +103,7 @@ $(BUILD_DIR)/%.o: $(GNL_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
+$(NAME): $(BUILD_DIR) $(OBJS)
 	$(call success, "All files have been compiled ✅")
 	$(call text, "Creating library $(NAME) [...]")
 	@$(AR) $(NAME) $(OBJS) 
