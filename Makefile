@@ -18,7 +18,7 @@ NAME= libft.a
 
 BUILD_DIR	= .build
 TEMP_DIR	= .temp
-LIBFT_DIR	= ./libft
+LIBFT_DIR	= ./
 
 SRC =	ft_atoi.c 		ft_bzero.c		\
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
@@ -91,7 +91,7 @@ $(BUILD_DIR):
 	$(MKDIR_P) $(BUILD_DIR)
 	@echo "* $(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
 
-$(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
+$(BUILD_DIR)/%.o: %.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
