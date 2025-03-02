@@ -1,10 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#			▗▖  ▗▖ ▗▄▖ ▗▖ ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖   ▗▄▄▄▖	     			       #
-#			▐▛▚▞▜▌▐▌ ▐▌▐▌▗▞▘▐▌   ▐▌     █  ▐▌   ▐▌   	   				       #
-#			▐▌  ▐▌▐▛▀▜▌▐▛▚▖ ▐▛▀▀▘▐▛▀▀▘  █  ▐▌   ▐▛▀▀▘	    			       #
-#			▐▌  ▐▌▐▌ ▐▌▐▌ ▐▌▐▙▄▄▖▐▌   ▗▄█▄▖▐▙▄▄▖▐▙▄▄▖         			       #
-#									     									   #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
+#    Updated: 2025/03/02 11:12:06 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +20,7 @@ BUILD_DIR	= .build
 TEMP_DIR	= .temp
 LIBFT_DIR	= ./libft
 
-SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
+SRC =	ft_atoi.c 		ft_bzero.c		\
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
 	ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c		\
 	ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
