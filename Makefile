@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/03/02 11:53:12 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/03/08 19:13:36 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,15 +110,13 @@ $(NAME): $(BUILD_DIR) $(OBJS)
 	$(call success, "Build complete: $(NAME) 📚 ✨")
 
 
-bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
-	@echo "$(YELLOW)Archiving $(_NAME) w/ bonus$(RESET)"
+bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
 	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "$(NAME) archived w/ bonus: $(SUCCESS)$(RESET)"
+	@echo "$(NAME) compiled w/ bonus: $(SUCCESS)$(RESET)"
 
 extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "$(YELLOW)Archiving $(NAME) w/ extras$(RESET)"
 	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "$(NAME) archived w/ extras: $(SUCCESS)$(RESET)"
+	@echo "$(NAME) compiled w/ extras: $(SUCCESS)$(RESET)"
 
 
 
@@ -128,14 +126,13 @@ extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJ
 #	clean the .o objects
 clean:
 	$(call text, "Removing object files [...]")
-	@$(RM) $(OBJ_DIR) $(OBJ_BONUS)
-	@$(RM) $(TEMP_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
 	$(call success, "Object files cleaned. 💣"); \
 
 fclean: clean
 	$(call text, "Removing library file...")
-	@$(RM) $(NAME)
-	@$(RM) $(BUILD_DIR)
+	$(RM) $(NAME)
+	$(RM) $(BUILD_DIR)
 	$(call success, "Library file cleaned. 💥")
 
 re: fclean all
