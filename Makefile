@@ -6,11 +6,14 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/03/08 19:13:36 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/03/08 19:21:15 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= libft.a
+# obs: when need to use ft_printf or gnl, compile libft like:
+# $(LIBFT_LIB):
+#	make extra -C $(LIBFT_DIR)
 
 #------------------------------------------------------------------------------#
 #									FILES  				     				   #
