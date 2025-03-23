@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:08:33 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/01/16 11:23:47 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/03/23 18:33:10 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Allocates and returns a new string,
 // which is the result of the concatenation of ’s1’ and ’s2’.
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char		*str;
 	size_t		i;
