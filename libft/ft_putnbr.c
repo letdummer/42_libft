@@ -6,11 +6,26 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 19:30:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/03/23 21:58:30 by ldummer-         ###   ########.fr       */
-/*                                                                            */
+/*   Updated: 2025/03/23 22:47:10 by ldummer-         ###   ########.fr       */
+/*		                                                                    */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_numlen(int n, int base)
+{
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n)
+	{
+		n /= base;
+		len++;
+	}
+	return (len);
+}
 
 int	ft_putnbr(int n)
 {

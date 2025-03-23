@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/03/23 16:49:03 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/03/23 22:48:38 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ BONUS_DIR= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
 		ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
 		ft_lstiter.c	ft_lstlast.c	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c)
 
-EXTRA = $(addprefix $(LIBFT_DIR)/, )
+EXTRA = $(addprefix $(LIBFT_DIR)/, ft_putchar_fd.c ft_putnbr.c 	ft_putchar.c\
+        ft_strcpy.c ft_strcmp.c)
 
 PRINTF_DIR	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_DIR)/, ft_printf.c ft_printf_utils.c)
