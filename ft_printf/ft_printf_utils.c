@@ -6,13 +6,13 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:22:51 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/23 11:45:26 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:03:40 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar_int(char c)
 {
 	return (write(1, &c, 1));
 }
