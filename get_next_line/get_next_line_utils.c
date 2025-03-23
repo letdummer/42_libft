@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/23 21:58:59 by ldummer-          #+#    #+#             */
+/*   Updated: 2025/03/23 22:05:22 by ldummer-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*ft_strchr(const char *str, int c)
@@ -13,7 +25,7 @@ char	*ft_strchr(const char *str, int c)
 		{
 			return ((char *)str);
 		}
-		str++;	
+		str++;
 	}
 	if (ch == *str)
 		return ((char *)str);
@@ -28,7 +40,8 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	new_str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	new_str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1)
+			* sizeof(char));
 	if (new_str == NULL)
 		return (NULL);
 	i = 0;
@@ -45,7 +58,6 @@ char	*ft_strjoin(char *s1, char *s2)
 		j++;
 	}
 	free(s1);
-	//new_str[i + j] = '\0';
 	return (new_str);
 }
 
@@ -93,4 +105,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-

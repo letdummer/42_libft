@@ -1,10 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/23 22:00:30 by ldummer-          #+#    #+#             */
+/*   Updated: 2025/03/23 22:01:42 by ldummer-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <fcntl.h>
-
 #include "get_next_line.h"
-
-// ________________________________________________
-
 
 int	main(void)
 {
@@ -12,12 +20,11 @@ int	main(void)
 	int		fd;
 
 	fd = open("example.txt", O_RDONLY);
-	/* if (fd < 0)
+	if (fd < 0)
 	{
 		printf("Error opening file");
-		return 1; 
-	} */
-	
+		return (1);
+	}
 	printf(" opening file\n");
 	line = get_next_line(fd);
 	while (line)
@@ -29,8 +36,6 @@ int	main(void)
 	close(fd);
 	return (0);
 }
-
-
 
 /* int main (int argc, char **argv)
 {

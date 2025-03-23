@@ -1,19 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/23 22:01:49 by ldummer-          #+#    #+#             */
+/*   Updated: 2025/03/23 22:03:31 by ldummer-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
-char  *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*buffer;
 	char		*line;
 
-
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-
 	buffer = read_file(fd, buffer);
 	printf("%s", buffer);
 	if (!buffer)
 		return (NULL);
-		
 	line = extract_line(buffer);
 	buffer = clean_buffer(buffer);
 	return (line);
@@ -27,7 +36,7 @@ char	*read_file(int fd, char *tmp)
 	bytes = 1;
 	buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 	if (!buffer)
-		return ( NULL);
+		return (NULL);
 	while (!(ft_strchr(tmp, '\n')) && bytes > 0)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
@@ -42,7 +51,7 @@ char	*read_file(int fd, char *tmp)
 
 char	*extract_line(char *tmp)
 {
-	int 	i;
+	int		i;
 	char	*line;
 
 	i = 0;
@@ -65,22 +74,16 @@ char	*extract_line(char *tmp)
 	return (line);
 }
 
-
 char	*clean_buffer(char *tmp)
 {
-	int 	i;
-	int 	j;
+	int		i;
+	int		j;
 	char	*new_tmp;
-
 
 	i = 0;
 	j = 0;
 	while (tmp[i] && tmp[i] != '\n')
 		i++;
-	
-	/* if(!tmp[i])
-		return (free(tmp), NULL); */
-
 	new_tmp = ft_calloc((ft_strlen(tmp) - i + 1), sizeof(char));
 	if (!new_tmp)
 		return (free(tmp), NULL);

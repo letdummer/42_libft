@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/03/23 18:33:24 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/03/23 21:58:13 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *str, int c);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *str1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char *s1, char *s2);
