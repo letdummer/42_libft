@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 13:45:46 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/25 12:41:41 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/03/23 22:54:42 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_p_specifier(va_list args)
 		length += ft_putstr("(nil)");
 	else
 	{
-		length += ft_putchar('0');
-		length += ft_putchar('x');
+		length += ft_putchar_int('0');
+		length += ft_putchar_int('x');
 		length += ft_puthex(address, 'x');
 	}
 	return (length);
@@ -38,9 +38,9 @@ int	ft_format_arg(const char *specifier, va_list args, int i)
 
 	counter = 0;
 	if (specifier[i] == '%')
-		counter += ft_putchar('%');
+		counter += ft_putchar_int('%');
 	else if (specifier[i] == 'c')
-		counter += ft_putchar((char)va_arg(args, int));
+		counter += ft_putchar_int((char)va_arg(args, int));
 	else if (specifier[i] == 's')
 		counter += ft_putstr(va_arg(args, char *));
 	else if (specifier[i] == 'x' || specifier[i] == 'X')
@@ -52,7 +52,7 @@ int	ft_format_arg(const char *specifier, va_list args, int i)
 	else if (specifier[i] == 'p')
 		counter += ft_p_specifier(args);
 	else
-		counter += ft_putchar(specifier[i]);
+		counter += ft_putchar_int(specifier[i]);
 	return (counter);
 }
 
@@ -70,7 +70,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1])
 			count_printed += ft_format_arg(format, args, ++i);
 		else if (format[i] != '%')
-			count_printed += ft_putchar(format[i]);
+			count_printed += ft_putchar_int(format[i]);
 		i++;
 	}
 	va_end(args);
