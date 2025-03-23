@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:22:51 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/03/23 23:03:40 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:05:49 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ int	ft_puthex(unsigned long long n, char specifier)
 	else if (specifier == 'X')
 		nb_hex = "0123456789ABCDEF";
 	if (n == 0)
-		return (ft_putchar('0'));
+		return (ft_putchar_int('0'));
 	if (n >= 16)
 		count += ft_puthex(n / 16, specifier);
-	count += ft_putchar(nb_hex[n % 16]);
+	count += ft_putchar_int(nb_hex[n % 16]);
 	return (count);
 }
 
@@ -63,12 +63,12 @@ int	ft_putnbr(int n)
 	}
 	if (n < 0)
 	{
-		count += ft_putchar('-');
+		count += ft_putchar_int('-');
 		n = -n;
 	}
 	if (n >= 10)
 		count += ft_putnbr(n / 10);
-	count += ft_putchar(n % 10 + '0');
+	count += ft_putchar_int(n % 10 + '0');
 	return (count);
 }
 
@@ -79,6 +79,6 @@ int	ft_putunsigned(unsigned long n)
 	count = 0;
 	if (n >= 10)
 		count += ft_putunsigned(n / 10);
-	count += ft_putchar(n % 10 + '0');
+	count += ft_putchar_int(n % 10 + '0');
 	return (count);
 }
