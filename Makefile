@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/03/08 19:21:15 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/03/23 16:49:03 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,7 +119,7 @@ bonus: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS)
 
 extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "$(NAME) compiled w/ extras: $(SUCCESS)$(RESET)"
+	@echo "$(NAME) compiled w/ extras $(SUCCESS)$(RESET)"
 
 
 
