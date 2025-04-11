@@ -5,33 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/23 21:58:59 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/03/23 22:05:22 by ldummer-         ###   ########.fr       */
+/*   Created: 2025/01/08 14:35:33 by ldummer-          #+#    #+#             */
+/*   Updated: 2025/01/09 14:07:36 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *str, int c)
-{
-	char	ch;
-
-	ch = (char)c;
-	if (!str)
-		return (NULL);
-	while (*str)
-	{
-		if (*str == ch)
-		{
-			return ((char *)str);
-		}
-		str++;
-	}
-	if (ch == *str)
-		return ((char *)str);
-	return (NULL);
-}
-
+// Helper function that joins two strings
+// Returns the new string
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char		*new_str;
@@ -40,28 +22,58 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	new_str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1)
-			* sizeof(char));
+	new_str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (new_str == NULL)
-		return (NULL);
+		return (free(new_str), NULL);
 	i = 0;
 	j = 0;
-	while (s1 && s1[i])
+	while (s1[i])
 	{
 		new_str[i] = s1[i];
 		i++;
 	}
-	while (s2 && s2[j])
+	while (s2[j])
 	{
 		new_str[i] = s2[j];
 		i++;
 		j++;
 	}
-	free(s1);
+	new_str[i] = '\0';
 	return (new_str);
 }
 
-/* char	*ft_strdup(const char *str1)
+// Helper function that allocates memory and initializes it to zero
+void	*ft_calloc(size_t nitems, size_t size)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
+	i = 0;
+	ptr = malloc(nitems * size);
+	if (ptr == NULL)
+		return (NULL);
+	while (i < (nitems * size))
+	{
+		ptr[i] = 0;
+		i++;
+	}
+	return (ptr);
+}
+
+// Helper function that calculates the length of a string
+size_t	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+// Helper function that duplicates a string
+// Returns the new string
+char	*ft_strdup(const char *str1)
 {
 	char	*new_string;
 	size_t	i;
@@ -77,31 +89,4 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	new_string[i] = '\0';
 	return (new_string);
-} */
-
-void	*ft_calloc(size_t nitems, size_t size)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	i = 0;
-	ptr = malloc(nitems * size);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < (nitems * size))
-	{
-		ptr[i] = '\0';
-		i++;
-	}
-	return (ptr);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }
