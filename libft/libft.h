@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/06/11 09:56:39 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/07/10 17:47:14 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	ft_putchar(char c);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *str, int c);
 int		ft_strcmp(const char *s1, const char *s2);
