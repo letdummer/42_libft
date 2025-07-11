@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/06/11 09:52:42 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/07/11 15:33:06 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,15 +23,41 @@ BUILD_DIR	= .build
 TEMP_DIR	= .temp
 LIBFT_DIR	= ./libft
 
-SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
-	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
-	ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c		\
-	ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
-	ft_putnbr_fd.c	ft_putstr_fd.c	ft_split.c		ft_strchr.c		\
-	ft_strdup.c		ft_striteri.c	ft_strjoin.c	ft_strlcat.c	\
-	ft_strlcpy.c	ft_strlen.c		ft_strmapi.c	ft_strncmp.c	\
-	ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c		\
-	ft_toupper.c	ft_tolower.c	ft_calloc.c		ft_isalnum.c)
+SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		\
+	ft_bzero.c		\
+	ft_isalpha.c	\
+	ft_isascii.c	\
+	ft_isdigit.c	\
+	ft_isprint.c	\
+	ft_itoa.c		\
+	ft_memchr.c		\
+	ft_memcmp.c		\
+	ft_memcpy.c		\
+	ft_memmove.c	\
+	ft_memset.c		\
+	ft_putchar_fd.c	\
+	ft_putendl_fd.c	\
+	ft_putnbr_fd.c	\
+	ft_putstr_fd.c	\
+	ft_realloc.c	\
+	ft_split.c		\
+	ft_strchr.c		\
+	ft_strdup.c		\
+	ft_striteri.c	\
+	ft_strjoin.c	\
+	ft_strlcat.c	\
+	ft_strlcpy.c	\
+	ft_strlen.c		\
+	ft_strmapi.c	\
+	ft_strncmp.c	\
+	ft_strnstr.c	\
+	ft_strrchr.c	\
+	ft_strtrim.c	\
+	ft_substr.c		\
+	ft_toupper.c	\
+	ft_tolower.c	\
+	ft_calloc.c		\
+	ft_isalnum.c)
 
 BONUS_DIR= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
 		ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
@@ -92,25 +118,23 @@ _SEP 			= ================================================
 all: $(NAME)
 
 $(BUILD_DIR):
-	$(MKDIR_P) $(BUILD_DIR)
-	@echo "$(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
+	@$(MKDIR_P) $(BUILD_DIR)
+	@echo "$(CYAN)Compiling$(RESET)"
 
 $(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(PRINTF_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(GNL_DIR)/%.c
 	@printf "$(GREEN_BOLD)█$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_DIR) $(OBJS)
-	$(call success, "All files have been compiled ✅")
-	$(call text, "Creating library $(NAME) [...]")
-	@$(AR) $(NAME) $(OBJS) 
+	@$(AR) $(NAME) $(OBJS)
 	$(call success, "Build complete: $(NAME) 📚 ✨")
 
 
@@ -130,16 +154,17 @@ extra: $(BUILD_DIR) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJ
 #	clean the .o objects
 clean:
 	$(call text, "Removing object files [...]")
-	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
+	@$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
 	$(call success, "Object files cleaned. 💣"); \
 
 fclean: clean
 	$(call text, "Removing library file...")
-	$(RM) $(NAME)
-	$(RM) $(BUILD_DIR)
+	@$(RM) $(NAME)
+	@$(RM) $(BUILD_DIR)
 	$(call success, "Library file cleaned. 💥")
 
 re: fclean all
+	@echo "\n"
 	$(call success, "All files have been recompiled ✅")
 
 #------------------------------------------------------------------------------#
@@ -188,14 +213,23 @@ help:
 
 #________		DEFINING ANSI COLORS___________________________________________#
 
-RED_BOLD	  := $(shell echo "\033[1;31m")
-GREEN_BOLD	:= $(shell echo "\033[1;32m")
-PURPLE  := $(shell echo "\033[0;35m")
-BLUE	 := $(shell echo "\033[0;34m")
-CYAN	:= $(shell echo "\033[0;36m")
-CYAN_BOLD	:= $(shell echo "\033[1;36m")
-YELLOW	:= $(shell echo "\033[0;33m")
-RESET	:= $(shell echo "\033[0m")
+#RED_BOLD	  := $(shell echo "\033[1;31m")
+#GREEN_BOLD	:= $(shell echo "\033[1;32m")
+#PURPLE  := $(shell echo "\033[0;35m")
+#BLUE	 := $(shell echo "\033[0;34m")
+#CYAN	:= $(shell echo "\033[0;36m")
+#CYAN_BOLD	:= $(shell echo "\033[1;36m")
+#YELLOW	:= $(shell echo "\033[0;33m")
+#RESET	:= $(shell echo "\033[0m")
+
+RED_BOLD		= \033[1m\033[38;5;160m
+GREEN_BOLD		= \033[1m\033[38;5;114m
+PURPLE  		= \033[38;5;177m
+BLUE			= \033[38;5;81m
+CYAN			= \033[38;5;50m
+CYAN_BOLD		= \033[1m\033[38;5;50m
+YELLOW			= \033[38;5;221m
+RESET			= \033[0m
 
 #________		FUNCTIONS TO PRINT COLORS______________________________________#
 

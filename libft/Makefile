@@ -187,14 +187,14 @@ help:
 
 #________		DEFINING ANSI COLORS___________________________________________#
 
-RED_BOLD	  := $(shell echo "\033[1;31m")
-GREEN_BOLD	:= $(shell echo "\033[1;32m")
-PURPLE  := $(shell echo "\033[0;35m")
-BLUE	 := $(shell echo "\033[0;34m")
-CYAN	:= $(shell echo "\033[0;36m")
-CYAN_BOLD	:= $(shell echo "\033[1;36m")
-YELLOW	:= $(shell echo "\033[0;33m")
-RESET	:= $(shell echo "\033[0m")
+RED_BOLD		= \033[1m\033[38;5;160m
+GREEN_BOLD		= \033[1m\033[38;5;114m
+PURPLE  		= \033[38;5;177m
+BLUE			= \033[38;5;81m
+CYAN			= \033[38;5;50m
+CYAN_BOLD		= \033[1m\033[38;5;50m
+YELLOW			= \033[38;5;221m
+RESET			= \033[0m
 
 #________		FUNCTIONS TO PRINT COLORS______________________________________#
 
