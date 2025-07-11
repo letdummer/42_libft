@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_reallocation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+void	*ft_reallocation(void *ptr, size_t old_size, size_t new_size)
 {
 	void	*new_ptr;
 	size_t	copy_size;

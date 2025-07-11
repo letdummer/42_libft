@@ -16,7 +16,7 @@ NAME= libft.a
 
 BUILD_DIR	= .build
 TEMP_DIR	= .temp
-LIBFT_DIR	= ./libft
+LIBFT_DIR	= .
 
 SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
 	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
@@ -24,15 +24,16 @@ SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		ft_bzero.c		\
 	ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
 	ft_putnbr_fd.c	ft_putstr_fd.c	ft_split.c		ft_strchr.c		\
 	ft_strdup.c		ft_striteri.c	ft_strjoin.c	ft_strlcat.c	\
+	ft_realloc.c	\
 	ft_strlcpy.c	ft_strlen.c		ft_strmapi.c	ft_strncmp.c	\
 	ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c		\
-	ft_toupper.c	ft_tolower.c	ft_calloc.c		ft_isalnum.c)
+	ft_toupper.c	ft_tolower.c	ft_calloc.c		ft_isalnum.c)	
 
 BONUS= $(addprefix $(LIBFT_DIR)/, ft_lstadd_back.c		\
 		ft_lstadd_front.c	ft_lstclear.c	ft_lstdelone.c \
 		ft_lstiter.c	ft_lstlast.c	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c)
 
-EXTRA = $(addprefix $(LIBFT_DIR)/, ft_putchar_fd	ft_putnbr ft_numlen.c \
+EXTRA = $(addprefix $(LIBFT_DIR)/, ft_putchar.c ft_putnbr.c ft_numlen.c \
 		ft_strcpy.c	ft_strcmp.c	)
 
 PRINTF_DIR	= ./ft_printf
@@ -87,7 +88,7 @@ _SEP 			= ================================================
 all: $(NAME)
 
 $(BUILD_DIR):
-	$(MKDIR_P) $(BUILD_DIR)
+	@$(MKDIR_P) $(BUILD_DIR)
 	@echo "* $(YELLOW)Creating $(BUILD_DIR) folder:$(RESET) $(_SUCCESS)"
 
 $(BUILD_DIR)/%.o: $(LIBFT_DIR)/%.c
