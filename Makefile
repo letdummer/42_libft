@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/07/11 15:33:06 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/08/07 14:51:25 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ LIBFT_DIR	= ./libft
 SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		\
 	ft_bzero.c		\
 	ft_isalpha.c	\
+	ft_is_space.c	\
 	ft_isascii.c	\
 	ft_isdigit.c	\
 	ft_isprint.c	\
