@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/08/07 14:48:18 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:45:53 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	ft_swap(char **a, char **b);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

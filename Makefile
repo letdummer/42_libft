@@ -6,7 +6,7 @@
 #    By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/01 15:47:59 by ldummer-          #+#    #+#              #
-#    Updated: 2025/08/07 14:51:25 by ldummer-         ###   ########.fr        #
+#    Updated: 2025/10/17 17:47:01 by ldummer-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC =	$(addprefix $(LIBFT_DIR)/, ft_atoi.c 		\
 	ft_strrchr.c	\
 	ft_strtrim.c	\
 	ft_substr.c		\
+	ft_swap.c		\
 	ft_toupper.c	\
 	ft_tolower.c	\
 	ft_calloc.c		\
