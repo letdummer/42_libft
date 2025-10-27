@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:09:25 by ldummer-          #+#    #+#             */
-/*   Updated: 2025/10/17 17:45:53 by ldummer-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:04:42 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 # include <unistd.h>
 # include <ctype.h>
 # include <stddef.h>
+
+# include "../ft_printf/libftprintf.h"
+# include "../get_next_line/get_next_line.h"
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
